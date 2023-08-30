@@ -15,6 +15,11 @@
 		5628B0CD2A9F9F6E00A8757C /* MiBancoAmiiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0CC2A9F9F6E00A8757C /* MiBancoAmiiboUITests.swift */; };
 		5628B0CF2A9F9F6E00A8757C /* MiBancoAmiiboUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0CE2A9F9F6E00A8757C /* MiBancoAmiiboUITestsLaunchTests.swift */; };
 		5628B0DD2A9FA6AD00A8757C /* AmiiboPorUnidad in Frameworks */ = {isa = PBXBuildFile; productRef = 5628B0DC2A9FA6AD00A8757C /* AmiiboPorUnidad */; };
+		5628B0DF2A9FB19100A8757C /* StubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0DE2A9FB19100A8757C /* StubViewModel.swift */; };
+		5628B0E12A9FB35C00A8757C /* StubViewDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E02A9FB35C00A8757C /* StubViewDI.swift */; };
+		5628B0E32A9FB3C600A8757C /* StubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E22A9FB3C600A8757C /* StubView.swift */; };
+		5628B0E72A9FBCC800A8757C /* APICliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E62A9FBCC800A8757C /* APICliente.swift */; };
+		5628B0E92A9FBF4500A8757C /* AmiiboDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		5628B0C82A9F9F6E00A8757C /* MiBancoAmiiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiBancoAmiiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5628B0CC2A9F9F6E00A8757C /* MiBancoAmiiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBancoAmiiboUITests.swift; sourceTree = "<group>"; };
 		5628B0CE2A9F9F6E00A8757C /* MiBancoAmiiboUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBancoAmiiboUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5628B0DE2A9FB19100A8757C /* StubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubViewModel.swift; sourceTree = "<group>"; };
+		5628B0E02A9FB35C00A8757C /* StubViewDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubViewDI.swift; sourceTree = "<group>"; };
+		5628B0E22A9FB3C600A8757C /* StubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubView.swift; sourceTree = "<group>"; };
+		5628B0E62A9FBCC800A8757C /* APICliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICliente.swift; sourceTree = "<group>"; };
+		5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDecodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,8 @@
 		5628B0B02A9F9F6900A8757C /* MiBancoAmiibo */ = {
 			isa = PBXGroup;
 			children = (
+				5628B0E52A9FBC2C00A8757C /* Integracion */,
+				5628B0E42A9FBC1A00A8757C /* Stub */,
 				5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */,
 				5628B0B32A9F9F6900A8757C /* ContentView.swift */,
 				5628B0B52A9F9F6D00A8757C /* Assets.xcassets */,
@@ -127,6 +139,25 @@
 				5628B0CE2A9F9F6E00A8757C /* MiBancoAmiiboUITestsLaunchTests.swift */,
 			);
 			path = MiBancoAmiiboUITests;
+			sourceTree = "<group>";
+		};
+		5628B0E42A9FBC1A00A8757C /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				5628B0DE2A9FB19100A8757C /* StubViewModel.swift */,
+				5628B0E02A9FB35C00A8757C /* StubViewDI.swift */,
+				5628B0E22A9FB3C600A8757C /* StubView.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		5628B0E52A9FBC2C00A8757C /* Integracion */ = {
+			isa = PBXGroup;
+			children = (
+				5628B0E62A9FBCC800A8757C /* APICliente.swift */,
+				5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */,
+			);
+			path = Integracion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5628B0DF2A9FB19100A8757C /* StubViewModel.swift in Sources */,
+				5628B0E72A9FBCC800A8757C /* APICliente.swift in Sources */,
+				5628B0E12A9FB35C00A8757C /* StubViewDI.swift in Sources */,
+				5628B0E32A9FB3C600A8757C /* StubView.swift in Sources */,
 				5628B0B42A9F9F6900A8757C /* ContentView.swift in Sources */,
 				5628B0B22A9F9F6900A8757C /* MiBancoAmiiboApp.swift in Sources */,
+				5628B0E92A9FBF4500A8757C /* AmiiboDecodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
