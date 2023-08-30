@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5628B0B22A9F9F6900A8757C /* MiBancoAmiiboApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */; };
+		5628B0B42A9F9F6900A8757C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0B32A9F9F6900A8757C /* ContentView.swift */; };
+		5628B0B62A9F9F6D00A8757C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5628B0B52A9F9F6D00A8757C /* Assets.xcassets */; };
+		5628B0B92A9F9F6D00A8757C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5628B0B82A9F9F6D00A8757C /* Preview Assets.xcassets */; };
+		5628B0C32A9F9F6E00A8757C /* MiBancoAmiiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0C22A9F9F6E00A8757C /* MiBancoAmiiboTests.swift */; };
+		5628B0CD2A9F9F6E00A8757C /* MiBancoAmiiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0CC2A9F9F6E00A8757C /* MiBancoAmiiboUITests.swift */; };
+		5628B0CF2A9F9F6E00A8757C /* MiBancoAmiiboUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0CE2A9F9F6E00A8757C /* MiBancoAmiiboUITestsLaunchTests.swift */; };
+		5628B0DD2A9FA6AD00A8757C /* AmiiboPorUnidad in Frameworks */ = {isa = PBXBuildFile; productRef = 5628B0DC2A9FA6AD00A8757C /* AmiiboPorUnidad */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5628B0BF2A9F9F6E00A8757C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5628B0A62A9F9F6900A8757C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5628B0AD2A9F9F6900A8757C;
+			remoteInfo = MiBancoAmiibo;
+		};
+		5628B0C92A9F9F6E00A8757C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5628B0A62A9F9F6900A8757C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5628B0AD2A9F9F6900A8757C;
+			remoteInfo = MiBancoAmiibo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5628B0AE2A9F9F6900A8757C /* MiBancoAmiibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiBancoAmiibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBancoAmiiboApp.swift; sourceTree = "<group>"; };
+		5628B0B32A9F9F6900A8757C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5628B0B52A9F9F6D00A8757C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5628B0B82A9F9F6D00A8757C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5628B0BE2A9F9F6E00A8757C /* MiBancoAmiiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiBancoAmiiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5628B0C22A9F9F6E00A8757C /* MiBancoAmiiboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBancoAmiiboTests.swift; sourceTree = "<group>"; };
+		5628B0C82A9F9F6E00A8757C /* MiBancoAmiiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiBancoAmiiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5628B0CC2A9F9F6E00A8757C /* MiBancoAmiiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBancoAmiiboUITests.swift; sourceTree = "<group>"; };
+		5628B0CE2A9F9F6E00A8757C /* MiBancoAmiiboUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBancoAmiiboUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5628B0AB2A9F9F6900A8757C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5628B0DD2A9FA6AD00A8757C /* AmiiboPorUnidad in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5628B0BB2A9F9F6E00A8757C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5628B0C52A9F9F6E00A8757C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5628B0A52A9F9F6900A8757C = {
+			isa = PBXGroup;
+			children = (
+				5628B0B02A9F9F6900A8757C /* MiBancoAmiibo */,
+				5628B0C12A9F9F6E00A8757C /* MiBancoAmiiboTests */,
+				5628B0CB2A9F9F6E00A8757C /* MiBancoAmiiboUITests */,
+				5628B0AF2A9F9F6900A8757C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5628B0AF2A9F9F6900A8757C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5628B0AE2A9F9F6900A8757C /* MiBancoAmiibo.app */,
+				5628B0BE2A9F9F6E00A8757C /* MiBancoAmiiboTests.xctest */,
+				5628B0C82A9F9F6E00A8757C /* MiBancoAmiiboUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5628B0B02A9F9F6900A8757C /* MiBancoAmiibo */ = {
+			isa = PBXGroup;
+			children = (
+				5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */,
+				5628B0B32A9F9F6900A8757C /* ContentView.swift */,
+				5628B0B52A9F9F6D00A8757C /* Assets.xcassets */,
+				5628B0B72A9F9F6D00A8757C /* Preview Content */,
+			);
+			path = MiBancoAmiibo;
+			sourceTree = "<group>";
+		};
+		5628B0B72A9F9F6D00A8757C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5628B0B82A9F9F6D00A8757C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5628B0C12A9F9F6E00A8757C /* MiBancoAmiiboTests */ = {
+			isa = PBXGroup;
+			children = (
+				5628B0C22A9F9F6E00A8757C /* MiBancoAmiiboTests.swift */,
+			);
+			path = MiBancoAmiiboTests;
+			sourceTree = "<group>";
+		};
+		5628B0CB2A9F9F6E00A8757C /* MiBancoAmiiboUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5628B0CC2A9F9F6E00A8757C /* MiBancoAmiiboUITests.swift */,
+				5628B0CE2A9F9F6E00A8757C /* MiBancoAmiiboUITestsLaunchTests.swift */,
+			);
+			path = MiBancoAmiiboUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5628B0AD2A9F9F6900A8757C /* MiBancoAmiibo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5628B0D22A9F9F6E00A8757C /* Build configuration list for PBXNativeTarget "MiBancoAmiibo" */;
+			buildPhases = (
+				5628B0AA2A9F9F6900A8757C /* Sources */,
+				5628B0AB2A9F9F6900A8757C /* Frameworks */,
+				5628B0AC2A9F9F6900A8757C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiBancoAmiibo;
+			packageProductDependencies = (
+				5628B0DC2A9FA6AD00A8757C /* AmiiboPorUnidad */,
+			);
+			productName = MiBancoAmiibo;
+			productReference = 5628B0AE2A9F9F6900A8757C /* MiBancoAmiibo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5628B0BD2A9F9F6E00A8757C /* MiBancoAmiiboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5628B0D52A9F9F6E00A8757C /* Build configuration list for PBXNativeTarget "MiBancoAmiiboTests" */;
+			buildPhases = (
+				5628B0BA2A9F9F6E00A8757C /* Sources */,
+				5628B0BB2A9F9F6E00A8757C /* Frameworks */,
+				5628B0BC2A9F9F6E00A8757C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5628B0C02A9F9F6E00A8757C /* PBXTargetDependency */,
+			);
+			name = MiBancoAmiiboTests;
+			productName = MiBancoAmiiboTests;
+			productReference = 5628B0BE2A9F9F6E00A8757C /* MiBancoAmiiboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5628B0C72A9F9F6E00A8757C /* MiBancoAmiiboUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5628B0D82A9F9F6E00A8757C /* Build configuration list for PBXNativeTarget "MiBancoAmiiboUITests" */;
+			buildPhases = (
+				5628B0C42A9F9F6E00A8757C /* Sources */,
+				5628B0C52A9F9F6E00A8757C /* Frameworks */,
+				5628B0C62A9F9F6E00A8757C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5628B0CA2A9F9F6E00A8757C /* PBXTargetDependency */,
+			);
+			name = MiBancoAmiiboUITests;
+			productName = MiBancoAmiiboUITests;
+			productReference = 5628B0C82A9F9F6E00A8757C /* MiBancoAmiiboUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5628B0A62A9F9F6900A8757C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5628B0AD2A9F9F6900A8757C = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					5628B0BD2A9F9F6E00A8757C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 5628B0AD2A9F9F6900A8757C;
+					};
+					5628B0C72A9F9F6E00A8757C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 5628B0AD2A9F9F6900A8757C;
+					};
+				};
+			};
+			buildConfigurationList = 5628B0A92A9F9F6900A8757C /* Build configuration list for PBXProject "MiBancoAmiibo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5628B0A52A9F9F6900A8757C;
+			packageReferences = (
+				5628B0DB2A9FA6AD00A8757C /* XCRemoteSwiftPackageReference "AmiiboPorUnidad" */,
+			);
+			productRefGroup = 5628B0AF2A9F9F6900A8757C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5628B0AD2A9F9F6900A8757C /* MiBancoAmiibo */,
+				5628B0BD2A9F9F6E00A8757C /* MiBancoAmiiboTests */,
+				5628B0C72A9F9F6E00A8757C /* MiBancoAmiiboUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5628B0AC2A9F9F6900A8757C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5628B0B92A9F9F6D00A8757C /* Preview Assets.xcassets in Resources */,
+				5628B0B62A9F9F6D00A8757C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5628B0BC2A9F9F6E00A8757C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5628B0C62A9F9F6E00A8757C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5628B0AA2A9F9F6900A8757C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5628B0B42A9F9F6900A8757C /* ContentView.swift in Sources */,
+				5628B0B22A9F9F6900A8757C /* MiBancoAmiiboApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5628B0BA2A9F9F6E00A8757C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5628B0C32A9F9F6E00A8757C /* MiBancoAmiiboTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5628B0C42A9F9F6E00A8757C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5628B0CD2A9F9F6E00A8757C /* MiBancoAmiiboUITests.swift in Sources */,
+				5628B0CF2A9F9F6E00A8757C /* MiBancoAmiiboUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5628B0C02A9F9F6E00A8757C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5628B0AD2A9F9F6900A8757C /* MiBancoAmiibo */;
+			targetProxy = 5628B0BF2A9F9F6E00A8757C /* PBXContainerItemProxy */;
+		};
+		5628B0CA2A9F9F6E00A8757C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5628B0AD2A9F9F6900A8757C /* MiBancoAmiibo */;
+			targetProxy = 5628B0C92A9F9F6E00A8757C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5628B0D02A9F9F6E00A8757C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5628B0D12A9F9F6E00A8757C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5628B0D32A9F9F6E00A8757C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiBancoAmiibo/Preview Content\"";
+				DEVELOPMENT_TEAM = F6KDBC2B2W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uzupis.MiBancoAmiibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5628B0D42A9F9F6E00A8757C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiBancoAmiibo/Preview Content\"";
+				DEVELOPMENT_TEAM = F6KDBC2B2W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uzupis.MiBancoAmiibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5628B0D62A9F9F6E00A8757C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6KDBC2B2W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uzupis.MiBancoAmiiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiBancoAmiibo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MiBancoAmiibo";
+			};
+			name = Debug;
+		};
+		5628B0D72A9F9F6E00A8757C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6KDBC2B2W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uzupis.MiBancoAmiiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiBancoAmiibo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MiBancoAmiibo";
+			};
+			name = Release;
+		};
+		5628B0D92A9F9F6E00A8757C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6KDBC2B2W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uzupis.MiBancoAmiiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiBancoAmiibo;
+			};
+			name = Debug;
+		};
+		5628B0DA2A9F9F6E00A8757C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6KDBC2B2W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uzupis.MiBancoAmiiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiBancoAmiibo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5628B0A92A9F9F6900A8757C /* Build configuration list for PBXProject "MiBancoAmiibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5628B0D02A9F9F6E00A8757C /* Debug */,
+				5628B0D12A9F9F6E00A8757C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5628B0D22A9F9F6E00A8757C /* Build configuration list for PBXNativeTarget "MiBancoAmiibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5628B0D32A9F9F6E00A8757C /* Debug */,
+				5628B0D42A9F9F6E00A8757C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5628B0D52A9F9F6E00A8757C /* Build configuration list for PBXNativeTarget "MiBancoAmiiboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5628B0D62A9F9F6E00A8757C /* Debug */,
+				5628B0D72A9F9F6E00A8757C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5628B0D82A9F9F6E00A8757C /* Build configuration list for PBXNativeTarget "MiBancoAmiiboUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5628B0D92A9F9F6E00A8757C /* Debug */,
+				5628B0DA2A9F9F6E00A8757C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5628B0DB2A9FA6AD00A8757C /* XCRemoteSwiftPackageReference "AmiiboPorUnidad" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/barcodepandora/AmiiboPorUnidad.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5628B0DC2A9FA6AD00A8757C /* AmiiboPorUnidad */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5628B0DB2A9FA6AD00A8757C /* XCRemoteSwiftPackageReference "AmiiboPorUnidad" */;
+			productName = AmiiboPorUnidad;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5628B0A62A9F9F6900A8757C /* Project object */;
+}
