@@ -106,6 +106,7 @@
 		5628B0B02A9F9F6900A8757C /* MiBancoAmiibo */ = {
 			isa = PBXGroup;
 			children = (
+				72D3CF672A9FEF2300409FEC /* Modelo */,
 				5628B0E52A9FBC2C00A8757C /* Integracion */,
 				5628B0E42A9FBC1A00A8757C /* Stub */,
 				5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */,
@@ -155,9 +156,16 @@
 			isa = PBXGroup;
 			children = (
 				5628B0E62A9FBCC800A8757C /* APICliente.swift */,
-				5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */,
 			);
 			path = Integracion;
+			sourceTree = "<group>";
+		};
+		72D3CF672A9FEF2300409FEC /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */,
+			);
+			path = Modelo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

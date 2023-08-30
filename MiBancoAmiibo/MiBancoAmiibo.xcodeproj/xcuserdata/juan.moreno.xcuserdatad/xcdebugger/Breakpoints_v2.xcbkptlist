@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BC2373B8-C955-4455-AD9C-82EAA26B45AA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37AA8F88-2E66-4C29-B133-8E58C01597C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiBancoAmiibo/Integracion/APICliente.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "darAmiibo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0789B633-37A0-4589-9BA8-94D6FE8EAD80"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiBancoAmiibo/Integracion/APICliente.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "darAmiibo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0789B633-37A0-4589-9BA8-94D6FE8EAD80 - feb55ff82b67d085"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;MiBancoAmiibo.AmiiboDecodable, Alamofire.AFError&gt;) -&gt; () in static MiBancoAmiibo.APICliente.darAmiibo() -&gt; ()"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Integracion/APICliente.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "0789B633-37A0-4589-9BA8-94D6FE8EAD80 - b9265aabcbace7a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;MiBancoAmiibo.AmiiboEnvelopeDecodable, Alamofire.AFError&gt;) -&gt; () in static MiBancoAmiibo.APICliente.darAmiibo() -&gt; ()"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Integracion/APICliente.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "0789B633-37A0-4589-9BA8-94D6FE8EAD80 - b9265aabcbace7a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;MiBancoAmiibo.AmiiboEnvelopeDecodable, Alamofire.AFError&gt;) -&gt; () in static MiBancoAmiibo.APICliente.darAmiibo() -&gt; ()"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Integracion/APICliente.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6CEB935-303A-4D3E-9031-BD47CC79A1FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiBancoAmiibo/Stub/StubView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

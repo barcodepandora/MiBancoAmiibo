@@ -65,3 +65,16 @@ class AmiiboDecodable: Decodable {
         type = try values.decodeIfPresent(String.self, forKey: .type)
     }
 }
+
+class AmiiboEnvelopeDecodable: Decodable {
+    var amiibo: AmiiboDecodable?
+    
+    enum CodingKeys: String, CodingKey {
+        case amiibo = "amiibo"
+    }
+
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        amiibo = try values.decodeIfPresent(AmiiboDecodable.self, forKey: .amiibo)
+    }
+}

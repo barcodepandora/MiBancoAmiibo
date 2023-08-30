@@ -14,7 +14,7 @@ struct StubView: View {
         Button {
             viewModel.darAmiibo()
         } label: {
-            Text("Vamos")
+            Text("Allez")
         }
     }
 }

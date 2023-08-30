@@ -12,5 +12,6 @@ final class StubViewModel: ObservableObject {
 //        APICliente.darAmiibo(completion: { (response, error) in
 //            debugPrint("En obra")
 //        })
+        APICliente.darAmiibo()
     }
 }
