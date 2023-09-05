@@ -15,13 +15,14 @@ class APICliente {
         return JSONDecoder()
     }()
     
-    static func darAmiibo() {
+    static func darAmiibo(completion: @escaping (AmiiboEnvelopeDecodable) -> Void) {
         AF.request("https://www.amiiboapi.com/api/amiibo/?id=0x0000010000190002")
         .responseDecodable(of: AmiiboEnvelopeDecodable.self, decoder: decoder) { response in
             debugPrint(response)
             switch response.result {
             case .success(let value):
                 debugPrint(value)
+                completion(value)
             case .failure(_):
                 debugPrint("KO")
             }

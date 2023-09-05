@@ -77,4 +77,9 @@ class AmiiboEnvelopeDecodable: Decodable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         amiibo = try values.decodeIfPresent(AmiiboDecodable.self, forKey: .amiibo)
     }
+    
+//    convenience init() {
+//        self.init()
+//        amiibo = nil
+//    }
 }

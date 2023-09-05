@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct StubView: View {
-    @ObservedObject var viewModel: StubViewModel
+    @ObservedObject var viewModel = StubViewModel()
     
     var body: some View {
+        Text("Men At Work")
         Button {
             viewModel.darAmiibo()
         } label: {
-            Text("Allez")
+            Text("Hi")
         }
     }
 }
