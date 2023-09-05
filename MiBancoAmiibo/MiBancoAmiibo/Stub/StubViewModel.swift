@@ -9,9 +9,10 @@ import Foundation
 
 final class StubViewModel: ObservableObject {
     
-//    @Published var amiiboEnvelope = AmiiboEnvelopeDecodable()
+    @Published var amiiboEnvelope: AmiiboEnvelopeDecodable
     
     init() {
+        self.amiiboEnvelope = AmiiboEnvelopeDecodable()
         self.darAmiibo()
     }
     
@@ -21,6 +22,7 @@ final class StubViewModel: ObservableObject {
 //        })
         APICliente.darAmiibo(completion: { (amiiboEnvelope) in
 //            self.amiiboEnvelope = amiiboEnvelope
+            debugPrint("En obra")
         })
     }
 }

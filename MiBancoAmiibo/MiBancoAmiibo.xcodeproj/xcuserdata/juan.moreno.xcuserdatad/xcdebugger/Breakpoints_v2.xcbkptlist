@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0789B633-37A0-4589-9BA8-94D6FE8EAD80"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MiBancoAmiibo/Integracion/APICliente.swift"
@@ -118,14 +118,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3E2E8128-8562-47AC-9A97-0DCBABBBB755"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MiBancoAmiibo/Stub/StubViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "darAmiibo()"
             landmarkType = "7">
             <Locations>
@@ -174,6 +174,21 @@
                   endingLineNumber = "24"
                   offsetFromSymbolStart = "12">
                </Location>
+               <Location
+                  uuid = "3E2E8128-8562-47AC-9A97-0DCBABBBB755 - 487dc581260e1303"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MiBancoAmiibo.AmiiboEnvelopeDecodable) -&gt; () in MiBancoAmiibo.StubViewModel.darAmiibo() -&gt; ()"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/StubViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "44">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -187,8 +202,8 @@
             filePath = "MiBancoAmiibo/Stub/StubViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "darAmiibo()"
             landmarkType = "7">
             <Locations>
@@ -282,6 +297,51 @@
                   endingLineNumber = "24"
                   offsetFromSymbolStart = "12">
                </Location>
+               <Location
+                  uuid = "5B630D8D-56BA-41A5-904C-6E419D3245F8 - 487dc581260e1303"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MiBancoAmiibo.AmiiboEnvelopeDecodable) -&gt; () in MiBancoAmiibo.StubViewModel.darAmiibo() -&gt; ()"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/StubViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "5B630D8D-56BA-41A5-904C-6E419D3245F8 - e0b78843474de04f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiBancoAmiibo.StubViewModel.darAmiibo() -&gt; ()"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/StubViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "5B630D8D-56BA-41A5-904C-6E419D3245F8 - 487dc581260e12e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MiBancoAmiibo.AmiiboEnvelopeDecodable) -&gt; () in MiBancoAmiibo.StubViewModel.darAmiibo() -&gt; ()"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/StubViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "44">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -295,8 +355,8 @@
             filePath = "MiBancoAmiibo/Stub/StubViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "init()"
             landmarkType = "7">
             <Locations>
@@ -329,6 +389,69 @@
                   startingLineNumber = "15"
                   endingLineNumber = "15"
                   offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "18260FCF-13FF-4B32-BC7B-25DA4C311CAF - 6ed14113189552fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiBancoAmiibo.StubViewModel.init() -&gt; MiBancoAmiibo.StubViewModel"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/StubViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59CDC492-683A-47B7-BD0D-74D7CB033465"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiBancoAmiibo/Stub/StubViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "darAmiibo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "59CDC492-683A-47B7-BD0D-74D7CB033465 - 487dc581260e1303"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MiBancoAmiibo.AmiiboEnvelopeDecodable) -&gt; () in MiBancoAmiibo.StubViewModel.darAmiibo() -&gt; ()"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/StubViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "59CDC492-683A-47B7-BD0D-74D7CB033465 - 487dc581260e12e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MiBancoAmiibo.AmiiboEnvelopeDecodable) -&gt; () in MiBancoAmiibo.StubViewModel.darAmiibo() -&gt; ()"
+                  moduleName = "MiBancoAmiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan.moreno/Documents/GitHub/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/StubViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "44">
                </Location>
             </Locations>
          </BreakpointContent>

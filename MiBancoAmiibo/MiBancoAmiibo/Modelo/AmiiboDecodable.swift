@@ -78,8 +78,5 @@ class AmiiboEnvelopeDecodable: Decodable {
         amiibo = try values.decodeIfPresent(AmiiboDecodable.self, forKey: .amiibo)
     }
     
-//    convenience init() {
-//        self.init()
-//        amiibo = nil
-//    }
+    init() { }
 }
