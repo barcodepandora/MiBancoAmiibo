@@ -11,6 +11,13 @@ final class StubViewModel: ObservableObject {
     
     @Published var amiiboEnvelope: AmiiboEnvelopeDecodable
     
+    @Published private(set) var state = PageState.autocomplete
+    
+    enum PageState {
+        case autocomplete
+        case about
+    }
+
     init() {
         self.amiiboEnvelope = AmiiboEnvelopeDecodable()
         self.darAmiibo()
@@ -20,5 +27,9 @@ final class StubViewModel: ObservableObject {
         APICliente.darAmiibo(completion: { (amiiboEnvelope) in
             self.amiiboEnvelope = amiiboEnvelope
         })
+    }
+    
+    func changeState() {
+        self.state = .about
     }
 }
