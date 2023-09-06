@@ -11,11 +11,16 @@ struct StubView: View {
     @ObservedObject var viewModel = StubViewModel()
     
     var body: some View {
-        Text("Men At Work")
-        Button {
-            viewModel.darAmiibo()
-        } label: {
-            Text("Hi")
+        VStack {
+            Text("Roof at Work")
+            Text("Carousel at Work")
+            VStack {
+                Button {
+                    viewModel.darAmiibo()
+                } label: {
+                    Text(viewModel.amiiboEnvelope.amiibo?.amiiboSeries ?? "Welcome")
+                }
+            }
         }
     }
 }

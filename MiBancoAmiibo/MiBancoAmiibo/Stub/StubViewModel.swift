@@ -17,12 +17,8 @@ final class StubViewModel: ObservableObject {
     }
     
     func darAmiibo() {
-//        APICliente.darAmiibo(completion: { (response, error) in
-//            debugPrint("En obra")
-//        })
         APICliente.darAmiibo(completion: { (amiiboEnvelope) in
-//            self.amiiboEnvelope = amiiboEnvelope
-            debugPrint("En obra")
+            self.amiiboEnvelope = amiiboEnvelope
         })
     }
 }
