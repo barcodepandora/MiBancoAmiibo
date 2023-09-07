@@ -34,44 +34,48 @@ struct StubView: View {
         VStack {
             Text("FIC - FICHA DEL CLIENTE")
             VStack {
-                Form {
-                    Section(header: Text("")) {
-                        ForEach(IdentifyOption	.allCases, id: \.self) { identify in
-                            RadioButtonRow(
-                                identify: identify,
-                                isSelected: selectedIdentify == identify
-                            )
-                            .onTapGesture {
-                                selectedIdentify = identify
+                VStack {
+                    Form {
+                        Section(header: Text("")) {
+                            ForEach(IdentifyOption    .allCases, id: \.self) { identify in
+                                RadioButtonRow(
+                                    identify: identify,
+                                    isSelected: selectedIdentify == identify
+                                )
+                                .onTapGesture {
+                                    selectedIdentify = identify
+                                }
                             }
                         }
                     }
-                }
-                VStack {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
-                            CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
-                            CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
-                            CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
-                            CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
-                            CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
-                            CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                    VStack {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                                CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
+                                CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
+                                CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                                CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
+                                CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
+                                CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                            }
+                        }
+                    }
+                    HStack {
+                        Button {
+                            //                        viewModel.darAmiibo()
+                        } label: {
+                            Text("CONSULTAR")
+                        }
+                        Button {
+                            //                        viewModel.darAmiibo()
+                        } label: {
+                            Text("LIMPIAR")
                         }
                     }
                 }
-                HStack {
-                    Button {
-//                        viewModel.darAmiibo()
-                    } label: {
-                        Text("CONSULTAR")
-                    }
-                    Button {
-//                        viewModel.darAmiibo()
-                    } label: {
-                        Text("LIMPIAR")
-                    }
-                }
+            }
+            VStack {
                 VStack {
                     switch viewModel.state {
                     case .autocomplete:
