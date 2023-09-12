@@ -21,6 +21,8 @@
 		5628B0E32A9FB3C600A8757C /* StubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E22A9FB3C600A8757C /* StubView.swift */; };
 		5628B0E72A9FBCC800A8757C /* APICliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E62A9FBCC800A8757C /* APICliente.swift */; };
 		5628B0E92A9FBF4500A8757C /* AmiiboDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */; };
+		5662D8E62AAFFEF000FAE6F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662D8E52AAFFEF000FAE6F4 /* LoginView.swift */; };
+		5662D8E82AB0025500FAE6F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662D8E72AB0025500FAE6F4 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		5628B0E22A9FB3C600A8757C /* StubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubView.swift; sourceTree = "<group>"; };
 		5628B0E62A9FBCC800A8757C /* APICliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICliente.swift; sourceTree = "<group>"; };
 		5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDecodable.swift; sourceTree = "<group>"; };
+		5662D8E52AAFFEF000FAE6F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5662D8E72AB0025500FAE6F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,8 @@
 				5628B0DE2A9FB19100A8757C /* StubViewModel.swift */,
 				5628B0E02A9FB35C00A8757C /* StubViewDI.swift */,
 				5628B0E22A9FB3C600A8757C /* StubView.swift */,
+				5662D8E52AAFFEF000FAE6F4 /* LoginView.swift */,
+				5662D8E72AB0025500FAE6F4 /* OnboardingView.swift */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -318,6 +324,8 @@
 				5628B0DF2A9FB19100A8757C /* StubViewModel.swift in Sources */,
 				5628B0E72A9FBCC800A8757C /* APICliente.swift in Sources */,
 				5628B0E12A9FB35C00A8757C /* StubViewDI.swift in Sources */,
+				5662D8E82AB0025500FAE6F4 /* OnboardingView.swift in Sources */,
+				5662D8E62AAFFEF000FAE6F4 /* LoginView.swift in Sources */,
 				5628B0E32A9FB3C600A8757C /* StubView.swift in Sources */,
 				5628B0B42A9F9F6900A8757C /* ContentView.swift in Sources */,
 				560016702AAA9FB50054F4AE /* ClientViewModelProtocol.swift in Sources */,
