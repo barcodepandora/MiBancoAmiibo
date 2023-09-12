@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560016702AAA9FB50054F4AE /* ClientViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600166F2AAA9FB50054F4AE /* ClientViewModelProtocol.swift */; };
 		5628B0B22A9F9F6900A8757C /* MiBancoAmiiboApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */; };
 		5628B0B42A9F9F6900A8757C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0B32A9F9F6900A8757C /* ContentView.swift */; };
 		5628B0B62A9F9F6D00A8757C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5628B0B52A9F9F6D00A8757C /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5600166F2AAA9FB50054F4AE /* ClientViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewModelProtocol.swift; sourceTree = "<group>"; };
 		5628B0AE2A9F9F6900A8757C /* MiBancoAmiibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiBancoAmiibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBancoAmiiboApp.swift; sourceTree = "<group>"; };
 		5628B0B32A9F9F6900A8757C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5600166E2AAA9F5D0054F4AE /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				5600166F2AAA9FB50054F4AE /* ClientViewModelProtocol.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		5628B0A52A9F9F6900A8757C = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		5628B0B02A9F9F6900A8757C /* MiBancoAmiibo */ = {
 			isa = PBXGroup;
 			children = (
+				5600166E2AAA9F5D0054F4AE /* Client */,
 				72D3CF672A9FEF2300409FEC /* Modelo */,
 				5628B0E52A9FBC2C00A8757C /* Integracion */,
 				5628B0E42A9FBC1A00A8757C /* Stub */,
@@ -309,6 +320,7 @@
 				5628B0E12A9FB35C00A8757C /* StubViewDI.swift in Sources */,
 				5628B0E32A9FB3C600A8757C /* StubView.swift in Sources */,
 				5628B0B42A9F9F6900A8757C /* ContentView.swift in Sources */,
+				560016702AAA9FB50054F4AE /* ClientViewModelProtocol.swift in Sources */,
 				5628B0B22A9F9F6900A8757C /* MiBancoAmiiboApp.swift in Sources */,
 				5628B0E92A9FBF4500A8757C /* AmiiboDecodable.swift in Sources */,
 			);

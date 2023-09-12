@@ -9,32 +9,52 @@ import SwiftUI
 
 struct StubView: View {
     
+    // MARK: View Model
     @ObservedObject var viewModel = StubViewModel()
+
+    // MARK: Carousel
     @State private var index = 0
-    
     @State private var currentIndex: Int = 0
     @GestureState private var dragOffset: CGFloat = 0
     private let images: [String] = ["Haruka_ofa_casual", "Chihaya_ofa_casual", "Yukiho_ofa_casual"]
     
     @State private var selectedIdentify: IdentifyOption? = .dni
     
-    @State private var clientes: [String] = ["Haruka", "Chihaya", "Yukiho", "Yayoi", "Ritsuko"]
+    @State private var clients: [String] = ["Haruka", "Chihaya", "Yukiho", "Yayoi", "Ritsuko"]
     
     @State private var searchText = ""
     @State private var filteredButtons: [String] = ["Haruka", "Chihaya", "Yukiho", "Yayoi", "Ritsuko"]
     
     @State private var sectionStates: [Bool] = [false, false, false]
-    
+        
     enum IdentifyOption: String, CaseIterable {
         case dni = "Tipo de Documento"
         case fullName = "Nombres y Apellidos"
     }
-    
+        
+    enum APIGuestOption: String, CaseIterable {
+        case mibanco = "Aqui MiBanco"
+        case amiibo = "Aqui Mock"
+    }
+
     var body: some View {
         VStack {
             Text("FIC - FICHA DEL CLIENTE")
             VStack {
                 VStack {
+                    Form {
+                        Section(header: Text("")) {
+                            ForEach(APIGuestOption    .allCases, id: \.self) { guest in
+                                RadioButtonAPIGuestRow(
+                                    guest: guest,
+                                    isSelected: viewModel.selectedAPIGuest == guest
+                                )
+                                .onTapGesture {
+                                    viewModel.selectedAPIGuest = guest
+                                }
+                            }
+                        }
+                    }
                     Form {
                         Section(header: Text("")) {
                             ForEach(IdentifyOption    .allCases, id: \.self) { identify in
@@ -88,7 +108,10 @@ struct StubView: View {
                         
                         List(filteredButtons, id: \.self) { buttonTitle in
                             Button(action: {
-                                viewModel.changeState()                            }) {
+                                viewModel.changeState()
+                                viewModel.client = ClientViewModel()
+                                viewModel.getClient()
+                            }) {
                                 Text(buttonTitle)
                             }
                         }
@@ -147,9 +170,9 @@ struct StubView: View {
     
     func filterButtons() {
         if searchText.isEmpty {
-            filteredButtons = clientes
+            filteredButtons = clients
         } else {
-            filteredButtons = clientes.filter { $0.localizedCaseInsensitiveContains(searchText) }
+            filteredButtons = clients.filter { $0.localizedCaseInsensitiveContains(searchText) }
         }
     }
 }
@@ -177,6 +200,22 @@ struct RadioButtonRow: View {
     var body: some View {
         HStack {
             Text(identify.rawValue)
+            Spacer()
+            Image(systemName: isSelected ? "largecircle.fill.circle" : "circle")
+                .imageScale(.large)
+                .foregroundColor(isSelected ? .blue : .gray)
+        }
+    }
+}
+
+
+struct RadioButtonAPIGuestRow: View {
+    let guest: StubView.APIGuestOption
+    let isSelected: Bool
+
+    var body: some View {
+        HStack {
+            Text(guest.rawValue)
             Spacer()
             Image(systemName: isSelected ? "largecircle.fill.circle" : "circle")
                 .imageScale(.large)

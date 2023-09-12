@@ -9,7 +9,9 @@ import Foundation
 
 final class StubViewModel: ObservableObject {
     
-    @Published var amiiboEnvelope: AmiiboEnvelopeDecodable
+    @Published var client: ClientViewModelProtocol
+    
+    @Published var selectedAPIGuest: StubView.APIGuestOption?
     
     @Published private(set) var state = PageState.autocomplete
     
@@ -17,16 +19,23 @@ final class StubViewModel: ObservableObject {
         case autocomplete
         case about
     }
-
+    
     init() {
-        self.amiiboEnvelope = AmiiboEnvelopeDecodable()
-        self.darAmiibo()
+        self.client = ClientViewModel()
     }
     
-    func darAmiibo() {
-        APICliente.darAmiibo(completion: { (amiiboEnvelope) in
-            self.amiiboEnvelope = amiiboEnvelope
-        })
+    func getClient() {
+        switch self.selectedAPIGuest {
+        case .amiibo:
+            APICliente.darAmiibo(completion: { (amiiboEnvelope) in
+                self.client = ClientViewModel(number: (amiiboEnvelope.amiibo?.amiiboSeries)!)
+                self.changeState()
+            })
+        case .mibanco:
+            break
+        case .none:
+            break
+        }
     }
     
     func changeState() {
