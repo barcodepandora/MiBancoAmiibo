@@ -14,11 +14,15 @@ struct LoginView: View {
     @State private var username = ""
     @State private var password = ""
     @State private var isInvalidCredentials = false
+    var data = OnboardingDataModel.data
     
     var body: some View {
         if isInOnboarding {
-            OnboardingView()
-        } else {
+            OnboardingViewPure(data: data, doneFunction: {
+                /// Update your state here
+//                self.onboardinDone = true
+                print("done onboarding")
+            })        } else {
             VStack {
                 Text("MiBanco")
                     .font(.largeTitle)
@@ -76,7 +80,7 @@ struct LoginView: View {
     
     func isValidCredentials(username: String, password: String) -> Bool {
         // Replace this with your validation logic, e.g., checking against a database or API.
-        let validUsername = "juan"
+        let validUsername = "Juan"
         let validPassword = "clave123"
         
         return username == validUsername && password == validPassword

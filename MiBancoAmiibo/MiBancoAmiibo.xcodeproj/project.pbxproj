@@ -23,6 +23,9 @@
 		5628B0E92A9FBF4500A8757C /* AmiiboDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */; };
 		5662D8E62AAFFEF000FAE6F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662D8E52AAFFEF000FAE6F4 /* LoginView.swift */; };
 		5662D8E82AB0025500FAE6F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662D8E72AB0025500FAE6F4 /* OnboardingView.swift */; };
+		72E9310A2AB0964F00EECD95 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E931002AB0964E00EECD95 /* OnboardingDataModel.swift */; };
+		72E9310B2AB0964F00EECD95 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E931012AB0964E00EECD95 /* OnboardingStepView.swift */; };
+		72E931122AB0964F00EECD95 /* OnboardingViewPure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E931082AB0964F00EECD95 /* OnboardingViewPure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDecodable.swift; sourceTree = "<group>"; };
 		5662D8E52AAFFEF000FAE6F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5662D8E72AB0025500FAE6F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		72E931002AB0964E00EECD95 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
+		72E931012AB0964E00EECD95 /* OnboardingStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
+		72E931082AB0964F00EECD95 /* OnboardingViewPure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewPure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,7 @@
 		5628B0E42A9FBC1A00A8757C /* Stub */ = {
 			isa = PBXGroup;
 			children = (
+				72E930FE2AB0961800EECD95 /* OnboardingViewPure */,
 				5628B0DE2A9FB19100A8757C /* StubViewModel.swift */,
 				5628B0E02A9FB35C00A8757C /* StubViewDI.swift */,
 				5628B0E22A9FB3C600A8757C /* StubView.swift */,
@@ -183,6 +190,16 @@
 				5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */,
 			);
 			path = Modelo;
+			sourceTree = "<group>";
+		};
+		72E930FE2AB0961800EECD95 /* OnboardingViewPure */ = {
+			isa = PBXGroup;
+			children = (
+				72E931002AB0964E00EECD95 /* OnboardingDataModel.swift */,
+				72E931012AB0964E00EECD95 /* OnboardingStepView.swift */,
+				72E931082AB0964F00EECD95 /* OnboardingViewPure.swift */,
+			);
+			path = OnboardingViewPure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,10 +344,13 @@
 				5662D8E82AB0025500FAE6F4 /* OnboardingView.swift in Sources */,
 				5662D8E62AAFFEF000FAE6F4 /* LoginView.swift in Sources */,
 				5628B0E32A9FB3C600A8757C /* StubView.swift in Sources */,
+				72E9310A2AB0964F00EECD95 /* OnboardingDataModel.swift in Sources */,
 				5628B0B42A9F9F6900A8757C /* ContentView.swift in Sources */,
 				560016702AAA9FB50054F4AE /* ClientViewModelProtocol.swift in Sources */,
 				5628B0B22A9F9F6900A8757C /* MiBancoAmiiboApp.swift in Sources */,
+				72E931122AB0964F00EECD95 /* OnboardingViewPure.swift in Sources */,
 				5628B0E92A9FBF4500A8757C /* AmiiboDecodable.swift in Sources */,
+				72E9310B2AB0964F00EECD95 /* OnboardingStepView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
