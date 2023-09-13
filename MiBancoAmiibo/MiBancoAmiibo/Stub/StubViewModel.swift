@@ -14,7 +14,7 @@ final class StubViewModel: ObservableObject {
     @Published var selectedAPIGuest: StubView.APIGuestOption?
     
     @Published private(set) var state = PageState.autocomplete
-    
+            
     enum PageState {
         case autocomplete
         case about

@@ -8,11 +8,12 @@
 import Foundation
 
 struct StubViewDI {
+    
     var stubView: StubView {
-        StubView(viewModel: stubViewModel)
+        StubView(viewModel: stubViewModel, isLoggedIn: .constant(true))
     }
                  
      var stubViewModel: StubViewModel {
-         StubViewModel()
+        StubViewModel()
      }
 }

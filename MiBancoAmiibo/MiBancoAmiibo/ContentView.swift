@@ -10,17 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @State private var isLoggedIn = false
     
-//    var body: some View {
-//        VStack {
-//            StubViewDI().stubView
-//        }
-//        .padding()
-//    }
-    
     var body: some View {
         NavigationView {
             if isLoggedIn {
-                StubViewDI().stubView
+//                StubViewDI().stubView
+                StubView(viewModel: StubViewModel(), isLoggedIn: $isLoggedIn)
             } else {
                 LoginView(isLoggedIn: $isLoggedIn)
             }

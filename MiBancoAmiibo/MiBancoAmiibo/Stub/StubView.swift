@@ -27,6 +27,10 @@ struct StubView: View {
     
     @State private var sectionStates: [Bool] = [false, false, false]
         
+    @State private var isUserProfilePresented = false
+        
+    @Binding var isLoggedIn: Bool
+
     enum IdentifyOption: String, CaseIterable {
         case dni = "Tipo de Documento"
         case fullName = "Nombres y Apellidos"
@@ -38,64 +42,64 @@ struct StubView: View {
     }
 
     var body: some View {
-        VStack {
-            Text("FIC - FICHA DEL CLIENTE")
+        NavigationView {
             VStack {
+                Text("FIC - FICHA DEL CLIENTE")
                 VStack {
-                    Form {
-                        Section(header: Text("")) {
-                            ForEach(APIGuestOption    .allCases, id: \.self) { guest in
-                                RadioButtonAPIGuestRow(
-                                    guest: guest,
-                                    isSelected: viewModel.selectedAPIGuest == guest
-                                )
-                                .onTapGesture {
-                                    viewModel.selectedAPIGuest = guest
-                                }
-                            }
-                        }
-                    }
-                    Form {
-                        Section(header: Text("")) {
-                            ForEach(IdentifyOption    .allCases, id: \.self) { identify in
-                                RadioButtonRow(
-                                    identify: identify,
-                                    isSelected: selectedIdentify == identify
-                                )
-                                .onTapGesture {
-                                    selectedIdentify = identify
-                                }
-                            }
-                        }
-                    }
                     VStack {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
-                                CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
-                                CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
-                                CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
-                                CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
-                                CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
-                                CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                        Form {
+                            Section(header: Text("")) {
+                                ForEach(APIGuestOption    .allCases, id: \.self) { guest in
+                                    RadioButtonAPIGuestRow(
+                                        guest: guest,
+                                        isSelected: viewModel.selectedAPIGuest == guest
+                                    )
+                                    .onTapGesture {
+                                        viewModel.selectedAPIGuest = guest
+                                    }
+                                }
                             }
                         }
-                    }
-                    HStack {
-                        Button {
-                            //                        viewModel.darAmiibo()
-                        } label: {
-                            Text("CONSULTAR")
+                        Form {
+                            Section(header: Text("")) {
+                                ForEach(IdentifyOption    .allCases, id: \.self) { identify in
+                                    RadioButtonRow(
+                                        identify: identify,
+                                        isSelected: selectedIdentify == identify
+                                    )
+                                    .onTapGesture {
+                                        selectedIdentify = identify
+                                    }
+                                }
+                            }
                         }
-                        Button {
-                            //                        viewModel.darAmiibo()
-                        } label: {
-                            Text("LIMPIAR")
+                        VStack {
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                                    CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
+                                    CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
+                                    CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                                    CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
+                                    CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
+                                    CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                                }
+                            }
+                        }
+                        HStack {
+                            Button {
+                                //                        viewModel.darAmiibo()
+                            } label: {
+                                Text("CONSULTAR")
+                            }
+                            Button {
+                                //                        viewModel.darAmiibo()
+                            } label: {
+                                Text("LIMPIAR")
+                            }
                         }
                     }
                 }
-            }
-            VStack {
                 VStack {
                     switch viewModel.state {
                     case .autocomplete:
@@ -158,14 +162,37 @@ struct StubView: View {
                     }
                 }
             }
-//            VStack {
-//                Button {
-//                    viewModel.darAmiibo()
-//                } label: {
-//                    Text(viewModel.amiiboEnvelope.amiibo?.amiiboSeries ?? "Welcome")
-//                }
-//            }
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.isUserProfilePresented.toggle()
+                }) {
+                    Image(systemName: "person.circle")
+                        .font(.title)
+                }
+            )
         }
+        .sheet(isPresented: $isUserProfilePresented) {
+            VStack {
+                Text("Perfil del Usuario")
+                    .font(.largeTitle)
+                    .padding()
+                
+                Spacer()
+                
+                // Contenido del perfil del usuario
+                Text("Nombre: Juan Pérez")
+                Text("Correo Electrónico: juan@example.com")
+                
+                Spacer()
+                
+                Button(action: {
+                    isLoggedIn = false
+                }) {
+                    Text("Cerrar sesión")
+                }
+            }
+        }
+
     }
     
     func filterButtons() {
@@ -224,8 +251,36 @@ struct RadioButtonAPIGuestRow: View {
     }
 }
 
+//struct UserProfileView: View {
+//
+//    @Binding var viewModel: StubViewModel
+//
+//    var body: some View {
+//        VStack {
+//            Text("Perfil del Usuario")
+//                .font(.largeTitle)
+//                .padding()
+//
+//            Spacer()
+//
+//            // Contenido del perfil del usuario
+//            Text("Nombre: Juan Pérez")
+//            Text("Correo Electrónico: juan@example.com")
+//
+//            Spacer()
+//
+//            Button(action: {
+//                viewModel.isLoggedIn = false
+//            }) {
+//                Text("Cerrar sesión")
+//            }
+//
+//        }
+//    }
+//}
+
 struct StubView_Previews: PreviewProvider {
     static var previews: some View {
-        StubViewDI().stubView
+        StubView(viewModel: StubViewModel(), isLoggedIn: .constant(true))
     }
 }
