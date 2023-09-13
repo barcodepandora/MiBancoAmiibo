@@ -31,6 +31,8 @@ struct StubView: View {
         
     @Binding var isLoggedIn: Bool
 
+    @State private var selectedTab = 0
+    
     enum IdentifyOption: String, CaseIterable {
         case dni = "Tipo de Documento"
         case fullName = "Nombres y Apellidos"
@@ -43,124 +45,166 @@ struct StubView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                Text("FIC - FICHA DEL CLIENTE")
+            TabView {
+                // Tab 1
+//                NavigationView {
+//                    Text("Tab 1 Content")
+//                        .navigationBarTitle("Tab 1", displayMode: .automatic)
+//                }
+//                .tabItem {
+//                    Image(systemName: "1.circle")
+//                    Text("Tab 1")
+//                }
+//                .tag(0)
+                
                 VStack {
+                    Text("FIC - FICHA DEL CLIENTE")
                     VStack {
-                        Form {
-                            Section(header: Text("")) {
-                                ForEach(APIGuestOption    .allCases, id: \.self) { guest in
-                                    RadioButtonAPIGuestRow(
-                                        guest: guest,
-                                        isSelected: viewModel.selectedAPIGuest == guest
-                                    )
-                                    .onTapGesture {
-                                        viewModel.selectedAPIGuest = guest
-                                    }
-                                }
-                            }
-                        }
-                        Form {
-                            Section(header: Text("")) {
-                                ForEach(IdentifyOption    .allCases, id: \.self) { identify in
-                                    RadioButtonRow(
-                                        identify: identify,
-                                        isSelected: selectedIdentify == identify
-                                    )
-                                    .onTapGesture {
-                                        selectedIdentify = identify
-                                    }
-                                }
-                            }
-                        }
                         VStack {
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack {
-                                    CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
-                                    CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
-                                    CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
-                                    CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
-                                    CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
-                                    CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
-                                    CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                            Form {
+                                Section(header: Text("")) {
+                                    ForEach(APIGuestOption    .allCases, id: \.self) { guest in
+                                        RadioButtonAPIGuestRow(
+                                            guest: guest,
+                                            isSelected: viewModel.selectedAPIGuest == guest
+                                        )
+                                        .onTapGesture {
+                                            viewModel.selectedAPIGuest = guest
+                                        }
+                                    }
+                                }
+                            }
+                            Form {
+                                Section(header: Text("")) {
+                                    ForEach(IdentifyOption    .allCases, id: \.self) { identify in
+                                        RadioButtonRow(
+                                            identify: identify,
+                                            isSelected: selectedIdentify == identify
+                                        )
+                                        .onTapGesture {
+                                            selectedIdentify = identify
+                                        }
+                                    }
+                                }
+                            }
+                            VStack {
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    HStack {
+                                        CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                                        CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
+                                        CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
+                                        CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                                        CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
+                                        CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
+                                        CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
+                                    }
+                                }
+                            }
+                            HStack {
+                                Button {
+                                    //                        viewModel.darAmiibo()
+                                } label: {
+                                    Text("CONSULTAR")
+                                }
+                                Button {
+                                    //                        viewModel.darAmiibo()
+                                } label: {
+                                    Text("LIMPIAR")
                                 }
                             }
                         }
-                        HStack {
-                            Button {
-                                //                        viewModel.darAmiibo()
-                            } label: {
-                                Text("CONSULTAR")
+                    }
+                    VStack {
+                        switch viewModel.state {
+                        case .autocomplete:
+                            TextField("Autocomplete", text: $searchText)
+                                .padding()
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .onChange(of: searchText) { newValue in
+                                    filterButtons()
+                                }
+
+                            List(filteredButtons, id: \.self) { buttonTitle in
+                                Button(action: {
+                                    viewModel.changeState()
+                                    viewModel.client = ClientViewModel()
+                                    viewModel.getClient()
+                                }) {
+                                    Text(buttonTitle)
+                                }
                             }
-                            Button {
-                                //                        viewModel.darAmiibo()
-                            } label: {
-                                Text("LIMPIAR")
+
+                        case .about:
+                            Form {
+                                Section() {
+                                    DisclosureGroup(isExpanded: $sectionStates[0]) {
+                                        VStack(alignment: .leading) {
+                                            Text("CC 79779705")
+                                            Text("JUAN MANUEL MORENO BELTRAN")
+                                        }
+                                    } label: {
+                                        Text("INFORMACION PRINCIPAL")
+                                    }
+                                }
+
+                                Section() {
+                                    DisclosureGroup(isExpanded: $sectionStates[1]) {
+                                        VStack(alignment: .leading) {
+                                            Text("Calle 154 #16-25")
+                                            Text("(+57)301860558)")
+                                        }
+                                    } label: {
+                                        Text("INFORMACION DEL DOMICILIO")
+                                    }
+                                }
+
+                                Section() {
+                                    DisclosureGroup(isExpanded: $sectionStates[2]) {
+                                        VStack(alignment: .leading) {
+                                            Text("GERENTE")
+                                            Text("Samtel")
+                                        }
+                                    } label: {
+                                        Text("INFORMACION DEL NEGOCIO")
+                                    }
+                                }
+                            }
+                            .onAppear() {
+                                // Initialize section states to collapsed initially
+                                sectionStates = [false, false, false]
                             }
                         }
                     }
                 }
-                VStack {
-                    switch viewModel.state {
-                    case .autocomplete:
-                        TextField("Autocomplete", text: $searchText)
-                            .padding()
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .onChange(of: searchText) { newValue in
-                                filterButtons()
-                            }
-                        
-                        List(filteredButtons, id: \.self) { buttonTitle in
-                            Button(action: {
-                                viewModel.changeState()
-                                viewModel.client = ClientViewModel()
-                                viewModel.getClient()
-                            }) {
-                                Text(buttonTitle)
-                            }
-                        }
-                        
-                    case .about:
-                        Form {
-                            Section() {
-                                DisclosureGroup(isExpanded: $sectionStates[0]) {
-                                    VStack(alignment: .leading) {
-                                        Text("CC 79779705")
-                                        Text("JUAN MANUEL MORENO BELTRAN")
-                                    }
-                                } label: {
-                                    Text("INFORMACION PRINCIPAL")
-                                }
-                            }
-
-                            Section() {
-                                DisclosureGroup(isExpanded: $sectionStates[1]) {
-                                    VStack(alignment: .leading) {
-                                        Text("Calle 154 #16-25")
-                                        Text("(+57)301860558)")
-                                    }
-                                } label: {
-                                    Text("INFORMACION DEL DOMICILIO")
-                                }
-                            }
-
-                            Section() {
-                                DisclosureGroup(isExpanded: $sectionStates[2]) {
-                                    VStack(alignment: .leading) {
-                                        Text("GERENTE")
-                                        Text("Samtel")
-                                    }
-                                } label: {
-                                    Text("INFORMACION DEL NEGOCIO")
-                                }
-                            }
-                        }
-                        .onAppear() {
-                            // Initialize section states to collapsed initially
-                            sectionStates = [false, false, false]
-                        }
+                .navigationBarItems(trailing:
+                    Button(action: {
+                        self.isUserProfilePresented.toggle()
+                    }) {
+                        Image(systemName: "person.circle")
+                            .font(.title)
                     }
+                )
+                // Tab 2
+                NavigationView {
+                    Text("Tab 2 Content")
+                        .navigationBarTitle("Tab 2", displayMode: .automatic)
                 }
+                .tabItem {
+                    Image(systemName: "2.circle")
+                    Text("Tab 2")
+                }
+                .tag(1)
+                
+                // Tab 3
+                NavigationView {
+                    Text("Tab 3 Content")
+                        .navigationBarTitle("Tab 3", displayMode: .automatic)
+                }
+                .tabItem {
+                    Image(systemName: "3.circle")
+                    Text("Tab 3")
+                }
+                .tag(2)
             }
             .navigationBarItems(trailing:
                 Button(action: {
@@ -170,21 +214,22 @@ struct StubView: View {
                         .font(.title)
                 }
             )
+
         }
         .sheet(isPresented: $isUserProfilePresented) {
             VStack {
                 Text("Perfil del Usuario")
                     .font(.largeTitle)
                     .padding()
-                
+
                 Spacer()
-                
+
                 // Contenido del perfil del usuario
                 Text("Nombre: Juan Pérez")
                 Text("Correo Electrónico: juan@example.com")
-                
+
                 Spacer()
-                
+
                 Button(action: {
                     isLoggedIn = false
                 }) {
@@ -192,7 +237,6 @@ struct StubView: View {
                 }
             }
         }
-
     }
     
     func filterButtons() {
@@ -284,3 +328,5 @@ struct StubView_Previews: PreviewProvider {
         StubView(viewModel: StubViewModel(), isLoggedIn: .constant(true))
     }
 }
+
+
