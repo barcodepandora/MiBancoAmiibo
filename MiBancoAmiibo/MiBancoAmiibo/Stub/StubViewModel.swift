@@ -11,10 +11,10 @@ final class StubViewModel: ObservableObject {
     
     @Published var client: ClientViewModelProtocol
     
-    @Published var selectedAPIGuest: StubView.APIGuestOption?
-    
     @Published private(set) var state = PageState.autocomplete
-            
+        
+    @Published var selectedAPIGuest: APIGuestOption? = .mibanco
+
     enum PageState {
         case autocomplete
         case about

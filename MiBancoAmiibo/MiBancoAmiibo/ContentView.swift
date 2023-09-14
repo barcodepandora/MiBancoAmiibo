@@ -11,13 +11,11 @@ struct ContentView: View {
     @State private var isLoggedIn = false
     
     var body: some View {
-        NavigationView {
-            if isLoggedIn {
+        if isLoggedIn {
 //                StubViewDI().stubView
-                StubView(viewModel: StubViewModel(), isLoggedIn: $isLoggedIn)
-            } else {
-                LoginView(isLoggedIn: $isLoggedIn)
-            }
+            StubView(viewModel: StubViewModel(), isLoggedIn: $isLoggedIn)
+        } else {
+            LoginView(isLoggedIn: $isLoggedIn)
         }
     }
 }

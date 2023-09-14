@@ -18,191 +18,57 @@ struct StubView: View {
     @GestureState private var dragOffset: CGFloat = 0
     private let images: [String] = ["Haruka_ofa_casual", "Chihaya_ofa_casual", "Yukiho_ofa_casual"]
     
-    @State private var selectedIdentify: IdentifyOption? = .dni
-    
-    @State private var clients: [String] = ["Haruka", "Chihaya", "Yukiho", "Yayoi", "Ritsuko"]
-    
-    @State private var searchText = ""
-    @State private var filteredButtons: [String] = ["Haruka", "Chihaya", "Yukiho", "Yayoi", "Ritsuko"]
-    
-    @State private var sectionStates: [Bool] = [false, false, false]
-        
+    // MARK: Profile
     @State private var isUserProfilePresented = false
         
+    // MARK: Logged
     @Binding var isLoggedIn: Bool
 
+    // MARK: Tab
     @State private var selectedTab = 0
     
-    enum IdentifyOption: String, CaseIterable {
-        case dni = "Tipo de Documento"
-        case fullName = "Nombres y Apellidos"
-    }
-        
-    enum APIGuestOption: String, CaseIterable {
-        case mibanco = "Aqui MiBanco"
-        case amiibo = "Aqui Mock"
-    }
-
+//(506) 8756-9484
+    
     var body: some View {
         NavigationView {
             TabView {
-                // Tab 1
-//                NavigationView {
-//                    Text("Tab 1 Content")
-//                        .navigationBarTitle("Tab 1", displayMode: .automatic)
-//                }
-//                .tabItem {
-//                    Image(systemName: "1.circle")
-//                    Text("Tab 1")
-//                }
-//                .tag(0)
                 
-                VStack {
-                    Text("FIC - FICHA DEL CLIENTE")
+                // Tab 1
+                NavigationView {
                     VStack {
                         VStack {
-                            Form {
-                                Section(header: Text("")) {
-                                    ForEach(APIGuestOption    .allCases, id: \.self) { guest in
-                                        RadioButtonAPIGuestRow(
-                                            guest: guest,
-                                            isSelected: viewModel.selectedAPIGuest == guest
-                                        )
-                                        .onTapGesture {
-                                            viewModel.selectedAPIGuest = guest
-                                        }
-                                    }
-                                }
-                            }
-                            Form {
-                                Section(header: Text("")) {
-                                    ForEach(IdentifyOption    .allCases, id: \.self) { identify in
-                                        RadioButtonRow(
-                                            identify: identify,
-                                            isSelected: selectedIdentify == identify
-                                        )
-                                        .onTapGesture {
-                                            selectedIdentify = identify
-                                        }
-                                    }
-                                }
-                            }
-                            VStack {
-                                ScrollView(.horizontal, showsIndicators: false) {
-                                    HStack {
-                                        CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
-                                        CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
-                                        CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
-                                        CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
-                                        CardView(dishName: "C", dishImage: "Chihaya_ofa_casual")
-                                        CardView(dishName: "Y", dishImage: "Yukiho_ofa_casual")
-                                        CardView(dishName: "H", dishImage: "Haruka_ofa_casual")
-                                    }
-                                }
-                            }
-                            HStack {
-                                Button {
-                                    //                        viewModel.darAmiibo()
-                                } label: {
-                                    Text("CONSULTAR")
-                                }
-                                Button {
-                                    //                        viewModel.darAmiibo()
-                                } label: {
-                                    Text("LIMPIAR")
-                                }
-                            }
+                            Text("FIC - FICHA DEL CLIENTE")
+                            RadioButtonView(viewModel: viewModel)
+                            CarouselView()
                         }
-                    }
-                    VStack {
-                        switch viewModel.state {
-                        case .autocomplete:
-                            TextField("Autocomplete", text: $searchText)
-                                .padding()
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .onChange(of: searchText) { newValue in
-                                    filterButtons()
-                                }
-
-                            List(filteredButtons, id: \.self) { buttonTitle in
-                                Button(action: {
-                                    viewModel.changeState()
-                                    viewModel.client = ClientViewModel()
-                                    viewModel.getClient()
-                                }) {
-                                    Text(buttonTitle)
-                                }
-                            }
-
-                        case .about:
-                            Form {
-                                Section() {
-                                    DisclosureGroup(isExpanded: $sectionStates[0]) {
-                                        VStack(alignment: .leading) {
-                                            Text("CC 79779705")
-                                            Text("JUAN MANUEL MORENO BELTRAN")
-                                        }
-                                    } label: {
-                                        Text("INFORMACION PRINCIPAL")
-                                    }
-                                }
-
-                                Section() {
-                                    DisclosureGroup(isExpanded: $sectionStates[1]) {
-                                        VStack(alignment: .leading) {
-                                            Text("Calle 154 #16-25")
-                                            Text("(+57)301860558)")
-                                        }
-                                    } label: {
-                                        Text("INFORMACION DEL DOMICILIO")
-                                    }
-                                }
-
-                                Section() {
-                                    DisclosureGroup(isExpanded: $sectionStates[2]) {
-                                        VStack(alignment: .leading) {
-                                            Text("GERENTE")
-                                            Text("Samtel")
-                                        }
-                                    } label: {
-                                        Text("INFORMACION DEL NEGOCIO")
-                                    }
-                                }
-                            }
-                            .onAppear() {
-                                // Initialize section states to collapsed initially
-                                sectionStates = [false, false, false]
-                            }
+                        VStack {
+                            AutocompleteView()
                         }
                     }
                 }
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        self.isUserProfilePresented.toggle()
-                    }) {
-                        Image(systemName: "person.circle")
-                            .font(.title)
-                    }
-                )
+                .tabItem {
+                    Image(systemName: "1.circle")
+                    Text("FIC")
+                }
+                .tag(0)
+                
                 // Tab 2
                 NavigationView {
-                    Text("Tab 2 Content")
-                        .navigationBarTitle("Tab 2", displayMode: .automatic)
+                    Text("MiBanco M2")
                 }
                 .tabItem {
                     Image(systemName: "2.circle")
-                    Text("Tab 2")
+                    Text("MiBanco M2")
                 }
                 .tag(1)
                 
                 // Tab 3
                 NavigationView {
-                    Text("Tab 3 Content")
-                        .navigationBarTitle("Tab 3", displayMode: .automatic)
+                    Text("MiBanco M3")
                 }
                 .tabItem {
                     Image(systemName: "3.circle")
-                    Text("Tab 3")
+                    Text("MiBanco M3")
                 }
                 .tag(2)
             }
@@ -214,114 +80,22 @@ struct StubView: View {
                         .font(.title)
                 }
             )
-
         }
         .sheet(isPresented: $isUserProfilePresented) {
-            VStack {
-                Text("Perfil del Usuario")
-                    .font(.largeTitle)
-                    .padding()
-
-                Spacer()
-
-                // Contenido del perfil del usuario
-                Text("Nombre: Juan Pérez")
-                Text("Correo Electrónico: juan@example.com")
-
-                Spacer()
-
-                Button(action: {
-                    isLoggedIn = false
-                }) {
-                    Text("Cerrar sesión")
-                }
-            }
-        }
-    }
-    
-    func filterButtons() {
-        if searchText.isEmpty {
-            filteredButtons = clients
-        } else {
-            filteredButtons = clients.filter { $0.localizedCaseInsensitiveContains(searchText) }
+            ProfileView(isLoggedIn: $isLoggedIn)
         }
     }
 }
 
-struct CardView: View {
-    let dishName: String
-    let dishImage: String
-    
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(LinearGradient(gradient: Gradient(colors: [.yellow, .green]), startPoint: .leading, endPoint: .trailing))
-                .frame(width: 78, height: 160, alignment: .center)
-            VStack {
-                Image("\(dishImage)").resizable().frame(width: 78, height: 160, alignment: .top)
-            }
-        }
-    }
+enum IdentifyOption: String, CaseIterable {
+    case dni = "Tipo de Documento"
+    case fullName = "Nombres y Apellidos"
 }
 
-struct RadioButtonRow: View {
-    let identify: StubView.IdentifyOption
-    let isSelected: Bool
-
-    var body: some View {
-        HStack {
-            Text(identify.rawValue)
-            Spacer()
-            Image(systemName: isSelected ? "largecircle.fill.circle" : "circle")
-                .imageScale(.large)
-                .foregroundColor(isSelected ? .blue : .gray)
-        }
-    }
+enum APIGuestOption: String, CaseIterable {
+    case mibanco = "Aqui MiBanco"
+    case amiibo = "Aqui Mock"
 }
-
-
-struct RadioButtonAPIGuestRow: View {
-    let guest: StubView.APIGuestOption
-    let isSelected: Bool
-
-    var body: some View {
-        HStack {
-            Text(guest.rawValue)
-            Spacer()
-            Image(systemName: isSelected ? "largecircle.fill.circle" : "circle")
-                .imageScale(.large)
-                .foregroundColor(isSelected ? .blue : .gray)
-        }
-    }
-}
-
-//struct UserProfileView: View {
-//
-//    @Binding var viewModel: StubViewModel
-//
-//    var body: some View {
-//        VStack {
-//            Text("Perfil del Usuario")
-//                .font(.largeTitle)
-//                .padding()
-//
-//            Spacer()
-//
-//            // Contenido del perfil del usuario
-//            Text("Nombre: Juan Pérez")
-//            Text("Correo Electrónico: juan@example.com")
-//
-//            Spacer()
-//
-//            Button(action: {
-//                viewModel.isLoggedIn = false
-//            }) {
-//                Text("Cerrar sesión")
-//            }
-//
-//        }
-//    }
-//}
 
 struct StubView_Previews: PreviewProvider {
     static var previews: some View {
