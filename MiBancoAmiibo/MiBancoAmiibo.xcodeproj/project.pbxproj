@@ -27,6 +27,7 @@
 		5679F87F2AB27EDF00D33B52 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679F87E2AB27EDF00D33B52 /* CarouselView.swift */; };
 		5679F8812AB27F1000D33B52 /* AutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679F8802AB27F1000D33B52 /* AutocompleteView.swift */; };
 		5679F8832AB27F8600D33B52 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679F8822AB27F8600D33B52 /* ProfileView.swift */; };
+		56F233C42AB3B3C7007F6FAD /* MiBancoAtomicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F233C32AB3B3C7007F6FAD /* MiBancoAtomicView.swift */; };
 		72E9310A2AB0964F00EECD95 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E931002AB0964E00EECD95 /* OnboardingDataModel.swift */; };
 		72E9310B2AB0964F00EECD95 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E931012AB0964E00EECD95 /* OnboardingStepView.swift */; };
 		72E931122AB0964F00EECD95 /* OnboardingViewPure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E931082AB0964F00EECD95 /* OnboardingViewPure.swift */; };
@@ -72,6 +73,7 @@
 		5679F87E2AB27EDF00D33B52 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		5679F8802AB27F1000D33B52 /* AutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteView.swift; sourceTree = "<group>"; };
 		5679F8822AB27F8600D33B52 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		56F233C32AB3B3C7007F6FAD /* MiBancoAtomicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBancoAtomicView.swift; sourceTree = "<group>"; };
 		72E931002AB0964E00EECD95 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		72E931012AB0964E00EECD95 /* OnboardingStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
 		72E931082AB0964F00EECD95 /* OnboardingViewPure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewPure.swift; sourceTree = "<group>"; };
@@ -138,9 +140,9 @@
 				72D3CF672A9FEF2300409FEC /* Modelo */,
 				5628B0E52A9FBC2C00A8757C /* Integracion */,
 				5628B0E42A9FBC1A00A8757C /* Stub */,
-				5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */,
 				5628B0B32A9F9F6900A8757C /* ContentView.swift */,
 				5628B0B52A9F9F6D00A8757C /* Assets.xcassets */,
+				5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */,
 				5628B0B72A9F9F6D00A8757C /* Preview Content */,
 			);
 			path = MiBancoAmiibo;
@@ -174,6 +176,7 @@
 		5628B0E42A9FBC1A00A8757C /* Stub */ = {
 			isa = PBXGroup;
 			children = (
+				56F233C32AB3B3C7007F6FAD /* MiBancoAtomicView.swift */,
 				5679F8822AB27F8600D33B52 /* ProfileView.swift */,
 				5679F8802AB27F1000D33B52 /* AutocompleteView.swift */,
 				5679F87E2AB27EDF00D33B52 /* CarouselView.swift */,
@@ -355,6 +358,7 @@
 				5679F87D2AB27E8C00D33B52 /* RadioButtonView.swift in Sources */,
 				5628B0E12A9FB35C00A8757C /* StubViewDI.swift in Sources */,
 				5662D8E82AB0025500FAE6F4 /* OnboardingView.swift in Sources */,
+				56F233C42AB3B3C7007F6FAD /* MiBancoAtomicView.swift in Sources */,
 				5662D8E62AAFFEF000FAE6F4 /* LoginView.swift in Sources */,
 				5628B0E32A9FB3C600A8757C /* StubView.swift in Sources */,
 				72E9310A2AB0964F00EECD95 /* OnboardingDataModel.swift in Sources */,

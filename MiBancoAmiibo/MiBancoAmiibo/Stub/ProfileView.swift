@@ -17,13 +17,8 @@ struct ProfileView: View {
                 .font(.largeTitle)
                 .padding()
 
-            Spacer()
-
-            // Contenido del perfil del usuario
-            Text("Nombre: Juan Pérez")
-            Text("Correo Electrónico: juan@example.com")
-
-            Spacer()
+            CardOrganism(title: "Nombre: Juan Pérez", iconName: "star.fill")
+            CardOrganism(title: "Correo Electrónico: juan@example.com", iconName: "heart.fill")
 
             Button(action: {
                 isLoggedIn = false

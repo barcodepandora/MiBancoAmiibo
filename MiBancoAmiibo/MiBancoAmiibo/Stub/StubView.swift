@@ -54,7 +54,11 @@ struct StubView: View {
                 
                 // Tab 2
                 NavigationView {
-                    Text("MiBanco M2")
+//                    Text("MiBanco M2")
+                    ScrollView {
+                        CardListTemplate()
+                    }
+                    .navigationTitle("Bootstrap-Styled MVP")
                 }
                 .tabItem {
                     Image(systemName: "2.circle")
