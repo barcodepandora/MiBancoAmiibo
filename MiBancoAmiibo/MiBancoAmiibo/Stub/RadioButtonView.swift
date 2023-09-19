@@ -11,21 +11,24 @@ struct RadioButtonView: View {
     
     @State private var selectedIdentify: IdentifyOption? = .dni
     @ObservedObject var viewModel = StubViewModel()
+    let options: [TypeIdentifyOption] = [.dni, .nit]
+    @State private var selectedOption = TypeIdentifyOption.dni
+    @State private var milena = 0
     
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("")) {
-                    ForEach(APIGuestOption    .allCases, id: \.self) { guest in
-                        RadioButtonAPIGuestRow(
-                            guest: guest,
-                            isSelected: viewModel.selectedAPIGuest == guest
-                        )
-                        .onTapGesture {
-                            viewModel.selectedAPIGuest = guest
-                        }
-                    }
-                }
+//                Section(header: Text("")) {
+//                    ForEach(APIGuestOption    .allCases, id: \.self) { guest in
+//                        RadioButtonAPIGuestRow(
+//                            guest: guest,
+//                            isSelected: viewModel.selectedAPIGuest == guest
+//                        )
+//                        .onTapGesture {
+//                            viewModel.selectedAPIGuest = guest
+//                        }
+//                    }
+//                }
                 Section(header: Text("")) {
                     ForEach(IdentifyOption    .allCases, id: \.self) { identify in
                         RadioButtonRow(
@@ -34,6 +37,17 @@ struct RadioButtonView: View {
                         )
                         .onTapGesture {
                             selectedIdentify = identify
+                        }
+                        if identify == .dni {
+                            Picker("", selection: $milena) {
+                                ForEach(0..<options.count, id: \.self) { index in
+                                    Text(options[index].rawValue)
+                                }
+                            }
+                            .pickerStyle(DefaultPickerStyle())
+                            .onChange(of: milena) { newValue in
+                                viewModel.selectedOption = .nit
+                            }
                         }
                     }
                 }

@@ -42,7 +42,12 @@ struct StubView: View {
                             CarouselView(viewModel: viewModel)
                         }
                         VStack {
-                            AutocompleteView(viewModel: viewModel)
+                            switch viewModel.state {
+                            case .empty:
+                                EmptyView()
+                            default:
+                                AutocompleteView(viewModel: viewModel)
+                            }
                         }
                     }
                 }
@@ -92,6 +97,7 @@ struct StubView: View {
 }
 
 enum Supply: String, CaseIterable {
+    case autocomplete = ""
     case basics = "Datos básicos"
     case offers = "Ofertas y Alertas"
     case risk = "Centrales de Riesgo"
@@ -104,12 +110,17 @@ enum Supply: String, CaseIterable {
 
 enum IdentifyOption: String, CaseIterable {
     case dni = "Tipo de Documento"
-    case fullName = "Nombres y Apellidos"
+    case fullName = "Nombres y Apellidos / Razón Social"
 }
 
 enum APIGuestOption: String, CaseIterable {
     case mibanco = "Aqui MiBanco"
     case amiibo = "Aqui Mock"
+}
+
+enum TypeIdentifyOption: String, CaseIterable {
+    case dni = "CC Cédula de Ciudadanía"
+    case nit = "NIT Número de Identificación Tributaria"
 }
 
 struct StubView_Previews: PreviewProvider {

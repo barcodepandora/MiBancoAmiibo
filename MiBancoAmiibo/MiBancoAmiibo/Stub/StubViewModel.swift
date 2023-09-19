@@ -10,12 +10,12 @@ import Foundation
 final class StubViewModel: ObservableObject {
     
     @Published var client: ClientViewModelProtocol
-    
     @Published private(set) var state = PageState.autocomplete
-        
     @Published var selectedAPIGuest: APIGuestOption? = .mibanco
+    @Published var selectedOption: TypeIdentifyOption = .dni
 
     enum PageState {
+        case empty
         case autocomplete
         case about
         case offers
@@ -23,6 +23,7 @@ final class StubViewModel: ObservableObject {
     
     init() {
         self.client = ClientViewModel()
+        self.state = .empty
     }
     
     func getClient(supply: Supply) {
@@ -44,6 +45,8 @@ final class StubViewModel: ObservableObject {
     
     func changeState(supply: Supply) {
         switch supply {
+        case .autocomplete:
+            self.state = .autocomplete
         case .basics:
             self.state = .about
         case .offers:

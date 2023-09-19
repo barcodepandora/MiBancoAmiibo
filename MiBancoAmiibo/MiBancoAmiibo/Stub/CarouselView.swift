@@ -31,6 +31,9 @@ struct CarouselView: View {
                 //                        viewModel.darAmiibo()
             } label: {
                 Text("Consultar")
+                    .onTapGesture {
+                        viewModel.changeState(supply: .autocomplete)
+                    }
             }
             Button {
                 //                        viewModel.darAmiibo()
