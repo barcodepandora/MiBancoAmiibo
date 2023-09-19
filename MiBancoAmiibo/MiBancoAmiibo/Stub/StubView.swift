@@ -39,10 +39,10 @@ struct StubView: View {
                         VStack {
                             Text("FIC - FICHA DEL CLIENTE")
                             RadioButtonView(viewModel: viewModel)
-                            CarouselView()
+                            CarouselView(viewModel: viewModel)
                         }
                         VStack {
-                            AutocompleteView()
+                            AutocompleteView(viewModel: viewModel)
                         }
                     }
                 }
@@ -89,6 +89,17 @@ struct StubView: View {
             ProfileView(isLoggedIn: $isLoggedIn)
         }
     }
+}
+
+enum Supply: String, CaseIterable {
+    case basics = "Datos básicos"
+    case offers = "Ofertas y Alertas"
+    case risk = "Centrales de Riesgo"
+    case history = "Historial Préstamos"
+    case fund = "Cupo Rotativo"
+    case debt = "Pasivos"
+    case contact = "Historial Contactos"
+    case pqr = "PQR"
 }
 
 enum IdentifyOption: String, CaseIterable {

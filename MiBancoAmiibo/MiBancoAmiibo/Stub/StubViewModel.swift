@@ -18,27 +18,48 @@ final class StubViewModel: ObservableObject {
     enum PageState {
         case autocomplete
         case about
+        case offers
     }
     
     init() {
         self.client = ClientViewModel()
     }
     
-    func getClient() {
+    func getClient(supply: Supply) {
         switch self.selectedAPIGuest {
         case .amiibo:
             APICliente.darAmiibo(completion: { (amiiboEnvelope) in
                 self.client = ClientViewModel(number: (amiiboEnvelope.amiibo?.amiiboSeries)!)
-                self.changeState()
+                self.changeState(supply: supply)
             })
         case .mibanco:
-            break
+            APICliente.darAmiibo(completion: { (amiiboEnvelope) in
+                self.client = ClientViewModel(number: (amiiboEnvelope.amiibo?.amiiboSeries)!)
+                self.changeState(supply: supply)
+            })
         case .none:
             break
         }
     }
     
-    func changeState() {
-        self.state = .about
+    func changeState(supply: Supply) {
+        switch supply {
+        case .basics:
+            self.state = .about
+        case .offers:
+            self.state = .offers
+        case .risk:
+            self.state = .about
+        case .history:
+            self.state = .offers
+        case .fund:
+            self.state = .about
+        case .debt:
+            self.state = .offers
+        case .contact:
+            self.state = .about
+        case .pqr:
+            self.state = .offers
+        }
     }
 }

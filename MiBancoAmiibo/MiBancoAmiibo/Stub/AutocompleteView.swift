@@ -9,7 +9,8 @@ import SwiftUI
 
 struct AutocompleteView: View {
     
-    @ObservedObject var viewModel = StubViewModel()
+    @ObservedObject var viewModel: StubViewModel
+    
     @State private var searchText = ""
     @State private var filteredButtons: [String] = ["Haruka", "Chihaya", "Yukiho", "Yayoi", "Ritsuko"]
     @State private var sectionStates: [Bool] = [false, false, false]
@@ -28,9 +29,9 @@ struct AutocompleteView: View {
 
                 List(filteredButtons, id: \.self) { buttonTitle in
                     Button(action: {
-                        viewModel.changeState()
+//                        viewModel.changeState()
                         viewModel.client = ClientViewModel()
-                        viewModel.getClient()
+                        viewModel.getClient(supply: .offers)
                     }) {
                         Text(buttonTitle)
                     }
@@ -68,6 +69,23 @@ struct AutocompleteView: View {
                             }
                         } label: {
                             Text("INFORMACION DEL NEGOCIO")
+                        }
+                    }
+                }
+                .onAppear() {
+                    // Initialize section states to collapsed initially
+                    sectionStates = [false, false, false]
+                }
+            case .offers:
+                Form {
+                    Section() {
+                        DisclosureGroup(isExpanded: $sectionStates[0]) {
+                            VStack(alignment: .leading) {
+                                Text("CC 79779705")
+                                Text("JUAN MANUEL MORENO BELTRAN")
+                            }
+                        } label: {
+                            Text("INFORMACION X")
                         }
                     }
                 }

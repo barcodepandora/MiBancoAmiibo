@@ -26,8 +26,6 @@ struct RadioButtonView: View {
                         }
                     }
                 }
-//            }
-//            Form {
                 Section(header: Text("")) {
                     ForEach(IdentifyOption    .allCases, id: \.self) { identify in
                         RadioButtonRow(
