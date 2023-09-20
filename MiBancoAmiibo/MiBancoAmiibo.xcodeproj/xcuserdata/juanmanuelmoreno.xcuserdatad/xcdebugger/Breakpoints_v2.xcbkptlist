@@ -14,8 +14,8 @@
             filePath = "MiBancoAmiibo/Stub/StubViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "getClient(supply:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,121 +30,10 @@
             filePath = "MiBancoAmiibo/Stub/StubViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "getClient(supply:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "61DD68A1-FA0A-4A4D-B227-A06AAE9E0116"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MiBancoAmiibo/Stub/StubViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "changeState(supply:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "61DD68A1-FA0A-4A4D-B227-A06AAE9E0116 - e3f4e99c03ad3ecf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiBancoAmiibo.StubViewModel.changeState() -&gt; ()"
-                  moduleName = "MiBancoAmiibo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/StubViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "25">
-               </Location>
-               <Location
-                  uuid = "61DD68A1-FA0A-4A4D-B227-A06AAE9E0116 - cc152af614e1cfbe"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiBancoAmiibo.StubViewModel.changeState(supply: MiBancoAmiibo.Supply) -&gt; ()"
-                  moduleName = "MiBancoAmiibo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/StubViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "101">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F0E293D9-F3E3-476F-AECD-5B22D90AE54F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MiBancoAmiibo/Stub/AutocompleteView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "F0E293D9-F3E3-476F-AECD-5B22D90AE54F - 8659b4c2f923a05f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #2 (Swift.String) -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;&gt;)&gt;, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt; in MiBancoAmiibo.AutocompleteView.body.getter : some"
-                  moduleName = "MiBancoAmiibo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/AutocompleteView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "F0E293D9-F3E3-476F-AECD-5B22D90AE54F - 8659b4c2f923a078"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #2 (Swift.String) -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;&gt;)&gt;, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt; in MiBancoAmiibo.AutocompleteView.body.getter : some"
-                  moduleName = "MiBancoAmiibo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/AutocompleteView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "F0E293D9-F3E3-476F-AECD-5B22D90AE54F - fb4936b15a555d81"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #2 (Swift.String) -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;&gt;)&gt;, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt; in MiBancoAmiibo.AutocompleteView.body.getter : some"
-                  moduleName = "MiBancoAmiibo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/MiBancoAmiibo/MiBancoAmiibo/MiBancoAmiibo/Stub/AutocompleteView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "108">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -157,24 +46,8 @@
             filePath = "MiBancoAmiibo/Stub/AutocompleteView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E1576075-4390-4E11-B408-AE3973999350"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MiBancoAmiibo/Stub/AutocompleteView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -189,10 +62,42 @@
             filePath = "MiBancoAmiibo/Stub/AutocompleteView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9037A4F1-7184-4D43-9498-8FA19B3BD56E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiBancoAmiibo/Stub/StubViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "getClient(supply:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD6C5FAF-78E9-4184-AA3E-73880EAC7AD3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiBancoAmiibo/Stub/StubViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "makeView(viewModel:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -103,6 +103,34 @@ struct OfferView: View {
     }
 }
 
+struct NotebookView: View {
+    
+    @ObservedObject var viewModel: StubViewModel
+    
+    var body: some View {
+        VStack {
+
+            if viewModel.flavor == .onboarding {
+                CarouselView(viewModel: viewModel)
+            }
+
+            switch viewModel.state {
+            case .about:
+                switch viewModel.selectedOption {
+                case .dni:
+                    AboutDNIView()
+                case .nit:
+                    AboutNITView()
+                }
+            case .offers:
+                OfferView()
+            default:
+                EmptyView()
+            }
+        }
+    }
+}
+
 struct AutocompleteView: View {
     
     @ObservedObject var viewModel: StubViewModel
@@ -111,7 +139,8 @@ struct AutocompleteView: View {
     @State private var filteredButtons: [String] = ["Juan Manuel Moreno", "Miguel Angel Reyes", "David Baron", "Luis Carlos Garzon", "José Julián Abreo", "Ingrid Geraldine Bonilla"]
     @State var sectionStates: [Bool] = [false, false, false]
     @State private var clients: [String] = ["Juan Manuel Moreno", "Miguel Angel Reyes", "David Baron", "Luis Carlos Garzon", "José Julián Abreo", "Ingrid Geraldine Bonilla"]
-
+    @State private var isView1Presented = false
+    
     var body: some View {
         VStack {
             switch viewModel.state {
@@ -126,23 +155,23 @@ struct AutocompleteView: View {
                     }
 
                 List(filteredButtons, id: \.self) { buttonTitle in
-                    Button(action: {
-                        viewModel.client = ClientViewModel()
-                        viewModel.getClient(supply: .basics)
-                    }) {
-                        Text(buttonTitle)
+                    switch viewModel.flavor {
+                    case .chunk:
+                        Button(action: {
+                            viewModel.client = ClientViewModel()
+                            viewModel.getClient(supply: .basics)
+                        }) {
+                            Text(buttonTitle)
+                        }
+                    case .onboarding:
+                        NavigationLink(buttonTitle, destination: NotebookView(viewModel: viewModel), isActive: $isView1Presented)
+                            .simultaneousGesture(TapGesture().onEnded {
+                                viewModel.getClient(supply: .basics)
+                            })
                     }
                 }
-
-            case .about:
-                switch viewModel.selectedOption {
-                case .dni:
-                    AboutDNIView()
-                case .nit:
-                    AboutNITView()
-                }
-            case .offers:
-                OfferView()
+            case .about, .offers:
+                NotebookView(viewModel: viewModel)
             }
         }
     }

@@ -11,12 +11,6 @@ struct StubView: View {
     
     // MARK: View Model
     @ObservedObject var viewModel = StubViewModel()
-
-    // MARK: Carousel
-    @State private var index = 0
-    @State private var currentIndex: Int = 0
-    @GestureState private var dragOffset: CGFloat = 0
-    private let images: [String] = ["Haruka_ofa_casual", "Chihaya_ofa_casual", "Yukiho_ofa_casual"]
     
     // MARK: Profile
     @State private var isUserProfilePresented = false
@@ -27,7 +21,7 @@ struct StubView: View {
     // MARK: Tab
     @State private var selectedTab = 0
     
-//(506) 8756-9484
+    @State private var isView1Presented = false
     
     var body: some View {
         NavigationView {
@@ -39,15 +33,10 @@ struct StubView: View {
                         VStack {
                             Text("FIC - FICHA DEL CLIENTE")
                             RadioButtonView(viewModel: viewModel)
-                            CarouselView(viewModel: viewModel)
+                            FlavorView()
                         }
                         VStack {
-                            switch viewModel.state {
-                            case .empty:
-                                EmptyView()
-                            default:
-                                AutocompleteView(viewModel: viewModel)
-                            }
+                            viewModel.viewState.makeView(viewModel: viewModel)
                         }
                     }
                 }
@@ -96,6 +85,24 @@ struct StubView: View {
     }
 }
 
+struct FlavorView: View {
+    
+    @ObservedObject var viewModel = StubViewModel()
+    @State private var isView1Presented = false
+    
+    var body: some View {
+//      viewModel.viewFlavor.makeView(viewModel: viewModel)
+        if viewModel.flavor == .chunk {
+            CarouselView(viewModel: viewModel)
+        } else {
+            NavigationLink("Consultar", destination: AutocompleteView(viewModel: viewModel), isActive: $isView1Presented)
+                .simultaneousGesture(TapGesture().onEnded {
+                    viewModel.getClient(supply: .autocomplete)
+                })
+        }
+    }
+}
+
 enum Supply: String, CaseIterable {
     case autocomplete = ""
     case basics = "Datos básicos"
@@ -121,6 +128,11 @@ enum APIGuestOption: String, CaseIterable {
 enum TypeIdentifyOption: String, CaseIterable {
     case dni = "CC Cédula de Ciudadanía"
     case nit = "NIT Número de Identificación Tributaria"
+}
+
+enum Flavor: String, CaseIterable {
+    case chunk = "Chunk"
+    case onboarding = "Onboarding"
 }
 
 struct StubView_Previews: PreviewProvider {

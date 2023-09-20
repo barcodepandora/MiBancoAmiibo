@@ -33,6 +33,8 @@ struct CarouselView: View {
                 Text("Consultar")
                     .onTapGesture {
                         viewModel.changeState(supply: .autocomplete)
+                        viewModel.changeViewState()
+                        viewModel.changeViewFlavor()
                     }
             }
             Button {

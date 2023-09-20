@@ -13,7 +13,7 @@ struct RadioButtonView: View {
     @ObservedObject var viewModel = StubViewModel()
     let options: [TypeIdentifyOption] = [.dni, .nit]
     @State private var selectedOption = TypeIdentifyOption.dni
-    @State private var milena = 0
+    @State private var optionIndex = 0
     @State private var searchText = ""
     
     var body: some View {
@@ -41,14 +41,14 @@ struct RadioButtonView: View {
                         }
                         switch identify {
                         case .dni:
-                            Picker("", selection: $milena) {
+                            Picker("", selection: $optionIndex) {
                                 ForEach(0..<options.count, id: \.self) { index in
                                     Text(options[index].rawValue)
                                 }
                             }
                             .pickerStyle(DefaultPickerStyle())
-                            .onChange(of: milena) { newValue in
-                                switch milena {
+                            .onChange(of: optionIndex) { newValue in
+                                switch optionIndex {
                                 case 0:
                                     viewModel.selectedOption = .dni
                                 case 1:

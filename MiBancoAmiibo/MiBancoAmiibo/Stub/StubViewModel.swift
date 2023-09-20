@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class StubViewModel: ObservableObject {
     
@@ -13,6 +14,9 @@ final class StubViewModel: ObservableObject {
     @Published private(set) var state = PageState.autocomplete
     @Published var selectedAPIGuest: APIGuestOption? = .mibanco
     @Published var selectedOption: TypeIdentifyOption = .dni
+    @Published var flavor: Flavor = .chunk
+    @Published var viewState: ViewState = EmptyState()
+    @Published var viewFlavor: ViewFlavor = CarouselFlavor()
 
     enum PageState {
         case empty
@@ -24,6 +28,9 @@ final class StubViewModel: ObservableObject {
     init() {
         self.client = ClientViewModel()
         self.state = .empty
+        self.flavor = .onboarding
+        self.changeViewState()
+        self.changeViewFlavor()
     }
     
     func getClient(supply: Supply) {
@@ -37,7 +44,8 @@ final class StubViewModel: ObservableObject {
             APICliente.darAmiibo(completion: { (amiiboEnvelope) in
                 self.client = ClientViewModel(number: (amiiboEnvelope.amiibo?.amiiboSeries)!)
                 self.changeState(supply: supply)
-//                self.selectedOption = .dni
+                self.changeViewState()
+                self.changeViewFlavor()
             })
         case .none:
             break
@@ -65,5 +73,77 @@ final class StubViewModel: ObservableObject {
         case .pqr:
             self.state = .offers
         }
+    }
+    
+    func changeViewState() {
+        switch state {
+        case .empty:
+            viewState = EmptyState()
+        default:
+            viewState = AutocompleteState()
+        }
+    }
+    
+    func changeViewFlavor() {
+        switch flavor {
+        case .chunk:
+            viewFlavor = CarouselFlavor()
+        case .onboarding:
+            viewFlavor = NavigationFromIdentifyFlavor()
+        }
+    }
+}
+
+// View by State
+protocol ViewState {
+    func makeView(viewModel: StubViewModel) -> AnyView
+}
+
+extension ViewState {
+    func makeView(viewModel: StubViewModel) -> AnyView {
+        fatalError("Subclasses must implement this method")
+    }
+}
+
+struct EmptyState: ViewState {
+    func makeView(viewModel: StubViewModel) -> AnyView {
+        return AnyView(EmptyView())
+    }
+}
+
+struct AutocompleteState: ViewState {
+    func makeView(viewModel: StubViewModel) -> AnyView {
+        return AnyView(AutocompleteView(viewModel: viewModel))
+    }
+}
+
+// View by Flavor
+protocol ViewFlavor {
+    func makeView(viewModel: StubViewModel) -> AnyView
+}
+
+extension ViewFlavor {
+    func makeView(viewModel: StubViewModel) -> AnyView {
+        fatalError("Subclasses must implement this method")
+    }
+}
+
+struct CarouselFlavor: ViewFlavor {
+    func makeView(viewModel: StubViewModel) -> AnyView {
+        return AnyView(CarouselView(viewModel: viewModel))
+    }
+}
+
+struct NavigationFromIdentifyFlavor: ViewFlavor {
+    @State private var isView1Presented = false
+    
+    func makeView(viewModel: StubViewModel) -> AnyView {
+        return AnyView(
+            NavigationLink("Consultar", destination: AutocompleteView(viewModel: viewModel), isActive: $isView1Presented)
+                .simultaneousGesture(TapGesture().onEnded {
+                    viewModel.getClient(supply: .autocomplete)
+                })
+
+        )
     }
 }
