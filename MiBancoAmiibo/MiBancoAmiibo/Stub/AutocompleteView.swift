@@ -108,9 +108,9 @@ struct AutocompleteView: View {
     @ObservedObject var viewModel: StubViewModel
     
     @State private var searchText = ""
-    @State private var filteredButtons: [String] = ["Haruka", "Chihaya", "Yukiho", "Yayoi", "Ritsuko"]
+    @State private var filteredButtons: [String] = ["Juan Manuel Moreno", "Miguel Angel Reyes", "David Baron", "Luis Carlos Garzon", "José Julián Abreo", "Ingrid Geraldine Bonilla"]
     @State var sectionStates: [Bool] = [false, false, false]
-    @State private var clients: [String] = ["Haruka", "Chihaya", "Yukiho", "Yayoi", "Ritsuko"]
+    @State private var clients: [String] = ["Juan Manuel Moreno", "Miguel Angel Reyes", "David Baron", "Luis Carlos Garzon", "José Julián Abreo", "Ingrid Geraldine Bonilla"]
 
     var body: some View {
         VStack {
@@ -128,7 +128,7 @@ struct AutocompleteView: View {
                 List(filteredButtons, id: \.self) { buttonTitle in
                     Button(action: {
                         viewModel.client = ClientViewModel()
-                        viewModel.getClient(supply: .offers)
+                        viewModel.getClient(supply: .basics)
                     }) {
                         Text(buttonTitle)
                     }

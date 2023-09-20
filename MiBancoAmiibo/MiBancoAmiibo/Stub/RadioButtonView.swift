@@ -14,6 +14,7 @@ struct RadioButtonView: View {
     let options: [TypeIdentifyOption] = [.dni, .nit]
     @State private var selectedOption = TypeIdentifyOption.dni
     @State private var milena = 0
+    @State private var searchText = ""
     
     var body: some View {
         VStack {
@@ -38,7 +39,8 @@ struct RadioButtonView: View {
                         .onTapGesture {
                             selectedIdentify = identify
                         }
-                        if identify == .dni {
+                        switch identify {
+                        case .dni:
                             Picker("", selection: $milena) {
                                 ForEach(0..<options.count, id: \.self) { index in
                                     Text(options[index].rawValue)
@@ -46,8 +48,19 @@ struct RadioButtonView: View {
                             }
                             .pickerStyle(DefaultPickerStyle())
                             .onChange(of: milena) { newValue in
-                                viewModel.selectedOption = .nit
+                                switch milena {
+                                case 0:
+                                    viewModel.selectedOption = .dni
+                                case 1:
+                                    viewModel.selectedOption = .nit
+                                default:
+                                    break
+                                }
                             }
+                        case .fullName:
+                            TextField("Aqui", text: $searchText)
+                                .padding()
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
                         }
                     }
                 }

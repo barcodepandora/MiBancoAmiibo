@@ -37,6 +37,7 @@ final class StubViewModel: ObservableObject {
             APICliente.darAmiibo(completion: { (amiiboEnvelope) in
                 self.client = ClientViewModel(number: (amiiboEnvelope.amiibo?.amiiboSeries)!)
                 self.changeState(supply: supply)
+//                self.selectedOption = .dni
             })
         case .none:
             break
