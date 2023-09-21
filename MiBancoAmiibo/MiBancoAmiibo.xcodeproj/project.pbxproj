@@ -137,9 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				5600166E2AAA9F5D0054F4AE /* Client */,
-				72D3CF672A9FEF2300409FEC /* Modelo */,
-				5628B0E52A9FBC2C00A8757C /* Integracion */,
-				5628B0E42A9FBC1A00A8757C /* Stub */,
+				72D3CF672A9FEF2300409FEC /* Model */,
+				5628B0E52A9FBC2C00A8757C /* Networking */,
+				5628B0E42A9FBC1A00A8757C /* FIC */,
 				5628B0B32A9F9F6900A8757C /* ContentView.swift */,
 				5628B0B52A9F9F6D00A8757C /* Assets.xcassets */,
 				5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */,
@@ -173,7 +173,7 @@
 			path = MiBancoAmiiboUITests;
 			sourceTree = "<group>";
 		};
-		5628B0E42A9FBC1A00A8757C /* Stub */ = {
+		5628B0E42A9FBC1A00A8757C /* FIC */ = {
 			isa = PBXGroup;
 			children = (
 				56F233C32AB3B3C7007F6FAD /* MiBancoAtomicView.swift */,
@@ -181,40 +181,40 @@
 				5679F8802AB27F1000D33B52 /* AutocompleteView.swift */,
 				5679F87E2AB27EDF00D33B52 /* CarouselView.swift */,
 				5679F87C2AB27E8B00D33B52 /* RadioButtonView.swift */,
-				72E930FE2AB0961800EECD95 /* OnboardingViewPure */,
+				72E930FE2AB0961800EECD95 /* OnboardingView */,
 				5628B0DE2A9FB19100A8757C /* StubViewModel.swift */,
 				5628B0E02A9FB35C00A8757C /* StubViewDI.swift */,
 				5628B0E22A9FB3C600A8757C /* StubView.swift */,
 				5662D8E52AAFFEF000FAE6F4 /* LoginView.swift */,
 				5662D8E72AB0025500FAE6F4 /* OnboardingView.swift */,
 			);
-			path = Stub;
+			path = FIC;
 			sourceTree = "<group>";
 		};
-		5628B0E52A9FBC2C00A8757C /* Integracion */ = {
+		5628B0E52A9FBC2C00A8757C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				5628B0E62A9FBCC800A8757C /* APICliente.swift */,
 			);
-			path = Integracion;
+			path = Networking;
 			sourceTree = "<group>";
 		};
-		72D3CF672A9FEF2300409FEC /* Modelo */ = {
+		72D3CF672A9FEF2300409FEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */,
 			);
-			path = Modelo;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		72E930FE2AB0961800EECD95 /* OnboardingViewPure */ = {
+		72E930FE2AB0961800EECD95 /* OnboardingView */ = {
 			isa = PBXGroup;
 			children = (
 				72E931002AB0964E00EECD95 /* OnboardingDataModel.swift */,
 				72E931012AB0964E00EECD95 /* OnboardingStepView.swift */,
 				72E931082AB0964F00EECD95 /* OnboardingViewPure.swift */,
 			);
-			path = OnboardingViewPure;
+			path = OnboardingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
