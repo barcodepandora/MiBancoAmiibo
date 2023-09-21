@@ -28,7 +28,7 @@ final class StubViewModel: ObservableObject {
     init() {
         self.client = ClientViewModel()
         self.state = .empty
-        self.flavor = .onboarding
+//        self.flavor = .onboarding
         self.changeViewState()
         self.changeViewFlavor()
     }
