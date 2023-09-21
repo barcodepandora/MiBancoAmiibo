@@ -94,6 +94,7 @@ struct FlavorView: View {
 //      viewModel.viewFlavor.makeView(viewModel: viewModel)
         if viewModel.flavor == .chunk {
             CarouselView(viewModel: viewModel)
+            AutocompleteView(viewModel: viewModel)
         } else {
             NavigationLink("Consultar", destination: AutocompleteView(viewModel: viewModel), isActive: $isView1Presented)
                 .simultaneousGesture(TapGesture().onEnded {

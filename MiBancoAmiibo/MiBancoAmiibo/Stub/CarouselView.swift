@@ -15,14 +15,14 @@ struct CarouselView: View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    CardView(cardName: "Haruka", cardImage: "Haruka_ofa_casual", cardSupply: .basics, viewModel: viewModel)
-                    CardView(cardName: "Chihaya", cardImage: "Chihaya_ofa_casual", cardSupply: .offers, viewModel: viewModel)
-                    CardView(cardName: "Yukiho", cardImage: "Yukiho_ofa_casual", cardSupply: .risk, viewModel: viewModel)
-                    CardView(cardName: "Yayoi", cardImage: "Yayoi_ofa_casual", cardSupply: .history, viewModel: viewModel)
-                    CardView(cardName: "Ritsuko", cardImage: "Ritsuko_ofa_casual", cardSupply: .fund, viewModel: viewModel)
-                    CardView(cardName: "Azusa", cardImage: "Azusa_ofa_casual", cardSupply: .debt, viewModel: viewModel)
-                    CardView(cardName: "Iori", cardImage: "Iori_ofa_casual", cardSupply: .contact, viewModel: viewModel)
-                    CardView(cardName: "Makoto", cardImage: "Makoto_ofa_casual", cardSupply: .pqr, viewModel: viewModel)
+                    CardView(cardName: "Datos básicos", cardImage: "MiBanco001", cardSupply: .basics, viewModel: viewModel)
+                    CardView(cardName: "Ofertas y Alertas", cardImage: "MiBanco002", cardSupply: .offers, viewModel: viewModel)
+                    CardView(cardName: "Centrales de Riesgo", cardImage: "MiBanco003", cardSupply: .risk, viewModel: viewModel)
+                    CardView(cardName: "Historial Préstamos", cardImage: "MiBanco004", cardSupply: .history, viewModel: viewModel)
+                    CardView(cardName: "Cupo Rotativo", cardImage: "MiBanco005", cardSupply: .fund, viewModel: viewModel)
+                    CardView(cardName: "Pasivos", cardImage: "MiBanco006", cardSupply: .debt, viewModel: viewModel)
+                    CardView(cardName: "Historial Contactos", cardImage: "MiBanco007", cardSupply: .contact, viewModel: viewModel)
+                    CardView(cardName: "PQR", cardImage: "MiBanco008", cardSupply: .pqr, viewModel: viewModel)
                 }
             }
         }
@@ -57,13 +57,14 @@ struct CardView: View {
         ZStack {
             Rectangle()
                 .fill(LinearGradient(gradient: Gradient(colors: [.yellow, .green]), startPoint: .leading, endPoint: .trailing))
-                .frame(width: 78, height: 160, alignment: .center)
+                .frame(width: 72, height: 72, alignment: .center)
             VStack {
                 Button(action: {
                     viewModel.getClient(supply: cardSupply)
                 }) {
-                    Image("\(cardImage)").resizable().frame(width: 78, height: 160, alignment: .top)
+                    Image("\(cardImage)").resizable().frame(width: 72, height: 86, alignment: .top)
                 }
+                Text(cardName)
             }
         }
     }

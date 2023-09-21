@@ -56,6 +56,7 @@ struct RadioButtonView: View {
                                 default:
                                     break
                                 }
+                                print("")
                             }
                         case .fullName:
                             TextField("Aqui", text: $searchText)
