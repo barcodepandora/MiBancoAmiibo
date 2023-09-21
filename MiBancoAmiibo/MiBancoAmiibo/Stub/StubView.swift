@@ -33,7 +33,7 @@ struct StubView: View {
                         VStack {
                             Text("FIC - FICHA DEL CLIENTE")
                             RadioButtonView(viewModel: viewModel)
-                            FlavorView()
+                            FlavorView(viewModel: viewModel)
                         }
                         VStack {
                             viewModel.viewState.makeView(viewModel: viewModel)
@@ -87,7 +87,7 @@ struct StubView: View {
 
 struct FlavorView: View {
     
-    @ObservedObject var viewModel = StubViewModel()
+    @ObservedObject var viewModel: StubViewModel
     @State private var isView1Presented = false
     
     var body: some View {

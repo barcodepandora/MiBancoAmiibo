@@ -10,7 +10,7 @@ import SwiftUI
 struct RadioButtonView: View {
     
     @State private var selectedIdentify: IdentifyOption? = .dni
-    @ObservedObject var viewModel = StubViewModel()
+    @ObservedObject var viewModel: StubViewModel
     let options: [TypeIdentifyOption] = [.dni, .nit]
     @State private var selectedOption = TypeIdentifyOption.dni
     @State private var optionIndex = 0
