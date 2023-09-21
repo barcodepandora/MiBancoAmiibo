@@ -21,6 +21,9 @@
 		5628B0E32A9FB3C600A8757C /* StubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E22A9FB3C600A8757C /* StubView.swift */; };
 		5628B0E72A9FBCC800A8757C /* APICliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E62A9FBCC800A8757C /* APICliente.swift */; };
 		5628B0E92A9FBF4500A8757C /* AmiiboDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */; };
+		56471A6D2ABCC69800859094 /* GetCountry.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 56471A6C2ABCC69800859094 /* GetCountry.graphql */; };
+		56471A6F2ABCDF8300859094 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 56471A6E2ABCDF8200859094 /* schema.json */; };
+		56471A742ABCEFB200859094 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56471A732ABCEFB200859094 /* API.swift */; };
 		5662D8E62AAFFEF000FAE6F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662D8E52AAFFEF000FAE6F4 /* LoginView.swift */; };
 		5662D8E82AB0025500FAE6F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662D8E72AB0025500FAE6F4 /* OnboardingView.swift */; };
 		5679F87D2AB27E8C00D33B52 /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679F87C2AB27E8B00D33B52 /* RadioButtonView.swift */; };
@@ -67,6 +70,9 @@
 		5628B0E22A9FB3C600A8757C /* StubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubView.swift; sourceTree = "<group>"; };
 		5628B0E62A9FBCC800A8757C /* APICliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICliente.swift; sourceTree = "<group>"; };
 		5628B0E82A9FBF4500A8757C /* AmiiboDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDecodable.swift; sourceTree = "<group>"; };
+		56471A6C2ABCC69800859094 /* GetCountry.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetCountry.graphql; sourceTree = "<group>"; };
+		56471A6E2ABCDF8200859094 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		56471A732ABCEFB200859094 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5662D8E52AAFFEF000FAE6F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5662D8E72AB0025500FAE6F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		5679F87C2AB27E8B00D33B52 /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
@@ -136,6 +142,8 @@
 		5628B0B02A9F9F6900A8757C /* MiBancoAmiibo */ = {
 			isa = PBXGroup;
 			children = (
+				56471A732ABCEFB200859094 /* API.swift */,
+				56471A722ABCEB5000859094 /* GraphQL */,
 				5600166E2AAA9F5D0054F4AE /* Client */,
 				72D3CF672A9FEF2300409FEC /* Model */,
 				5628B0E52A9FBC2C00A8757C /* Networking */,
@@ -199,6 +207,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		56471A722ABCEB5000859094 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				56471A6E2ABCDF8200859094 /* schema.json */,
+				56471A6C2ABCC69800859094 /* GetCountry.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
 		72D3CF672A9FEF2300409FEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5628B0D22A9F9F6E00A8757C /* Build configuration list for PBXNativeTarget "MiBancoAmiibo" */;
 			buildPhases = (
+				56471A712ABCE90800859094 /* Generate Apollo GraphQL API */,
 				5628B0AA2A9F9F6900A8757C /* Sources */,
 				5628B0AB2A9F9F6900A8757C /* Frameworks */,
 				5628B0AC2A9F9F6900A8757C /* Resources */,
@@ -310,6 +328,7 @@
 			mainGroup = 5628B0A52A9F9F6900A8757C;
 			packageReferences = (
 				5628B0DB2A9FA6AD00A8757C /* XCRemoteSwiftPackageReference "AmiiboPorUnidad" */,
+				56471A6B2ABCC55C00859094 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 5628B0AF2A9F9F6900A8757C /* Products */;
 			projectDirPath = "";
@@ -327,8 +346,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56471A6F2ABCDF8300859094 /* schema.json in Resources */,
 				5628B0B92A9F9F6D00A8757C /* Preview Assets.xcassets in Resources */,
 				5628B0B62A9F9F6D00A8757C /* Assets.xcassets in Resources */,
+				56471A6D2ABCC69800859094 /* GetCountry.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,12 +369,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		56471A712ABCE90800859094 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/MiBancoAmiibo\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5628B0AA2A9F9F6900A8757C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5628B0DF2A9FB19100A8757C /* StubViewModel.swift in Sources */,
+				56471A742ABCEFB200859094 /* API.swift in Sources */,
 				5628B0E72A9FBCC800A8757C /* APICliente.swift in Sources */,
 				5679F87D2AB27E8C00D33B52 /* RadioButtonView.swift in Sources */,
 				5628B0E12A9FB35C00A8757C /* StubViewDI.swift in Sources */,
@@ -703,6 +746,14 @@
 			requirement = {
 				branch = main;
 				kind = branch;
+			};
+		};
+		56471A6B2ABCC55C00859094 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
