@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		560016702AAA9FB50054F4AE /* ClientViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600166F2AAA9FB50054F4AE /* ClientViewModelProtocol.swift */; };
+		560DCE792AC1F3DB002067FF /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 560DCE782AC1F3DB002067FF /* Apollo */; };
+		560DCE7D2AC1F721002067FF /* Country.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 560DCE7C2AC1F721002067FF /* Country.graphql */; };
+		560DCE812AC1F89C002067FF /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 560DCE802AC1F89C002067FF /* schema.json */; };
+		560DCE832AC1F8C8002067FF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560DCE822AC1F8C8002067FF /* API.swift */; };
+		560DCE852AC1F9AF002067FF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560DCE842AC1F9AF002067FF /* Network.swift */; };
+		560DCE872AC1F9FA002067FF /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560DCE862AC1F9FA002067FF /* LaunchViewModel.swift */; };
 		5628B0B22A9F9F6900A8757C /* MiBancoAmiiboApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */; };
 		5628B0B42A9F9F6900A8757C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628B0B32A9F9F6900A8757C /* ContentView.swift */; };
 		5628B0B62A9F9F6D00A8757C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5628B0B52A9F9F6D00A8757C /* Assets.xcassets */; };
@@ -52,6 +58,11 @@
 
 /* Begin PBXFileReference section */
 		5600166F2AAA9FB50054F4AE /* ClientViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewModelProtocol.swift; sourceTree = "<group>"; };
+		560DCE7C2AC1F721002067FF /* Country.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Country.graphql; sourceTree = "<group>"; };
+		560DCE802AC1F89C002067FF /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		560DCE822AC1F8C8002067FF /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		560DCE842AC1F9AF002067FF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		560DCE862AC1F9FA002067FF /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		5628B0AE2A9F9F6900A8757C /* MiBancoAmiibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiBancoAmiibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5628B0B12A9F9F6900A8757C /* MiBancoAmiiboApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBancoAmiiboApp.swift; sourceTree = "<group>"; };
 		5628B0B32A9F9F6900A8757C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5628B0DD2A9FA6AD00A8757C /* AmiiboPorUnidad in Frameworks */,
+				560DCE792AC1F3DB002067FF /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +206,12 @@
 		5628B0E52A9FBC2C00A8757C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				560DCE822AC1F8C8002067FF /* API.swift */,
+				560DCE802AC1F89C002067FF /* schema.json */,
 				5628B0E62A9FBCC800A8757C /* APICliente.swift */,
+				560DCE7C2AC1F721002067FF /* Country.graphql */,
+				560DCE842AC1F9AF002067FF /* Network.swift */,
+				560DCE862AC1F9FA002067FF /* LaunchViewModel.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -235,6 +252,7 @@
 			name = MiBancoAmiibo;
 			packageProductDependencies = (
 				5628B0DC2A9FA6AD00A8757C /* AmiiboPorUnidad */,
+				560DCE782AC1F3DB002067FF /* Apollo */,
 			);
 			productName = MiBancoAmiibo;
 			productReference = 5628B0AE2A9F9F6900A8757C /* MiBancoAmiibo.app */;
@@ -310,6 +328,7 @@
 			mainGroup = 5628B0A52A9F9F6900A8757C;
 			packageReferences = (
 				5628B0DB2A9FA6AD00A8757C /* XCRemoteSwiftPackageReference "AmiiboPorUnidad" */,
+				560DCE772AC1F3DB002067FF /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 5628B0AF2A9F9F6900A8757C /* Products */;
 			projectDirPath = "";
@@ -327,8 +346,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560DCE812AC1F89C002067FF /* schema.json in Resources */,
 				5628B0B92A9F9F6D00A8757C /* Preview Assets.xcassets in Resources */,
 				5628B0B62A9F9F6D00A8757C /* Assets.xcassets in Resources */,
+				560DCE7D2AC1F721002067FF /* Country.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +375,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5628B0DF2A9FB19100A8757C /* StubViewModel.swift in Sources */,
+				560DCE832AC1F8C8002067FF /* API.swift in Sources */,
+				560DCE872AC1F9FA002067FF /* LaunchViewModel.swift in Sources */,
 				5628B0E72A9FBCC800A8757C /* APICliente.swift in Sources */,
 				5679F87D2AB27E8C00D33B52 /* RadioButtonView.swift in Sources */,
 				5628B0E12A9FB35C00A8757C /* StubViewDI.swift in Sources */,
@@ -362,6 +385,7 @@
 				5662D8E62AAFFEF000FAE6F4 /* LoginView.swift in Sources */,
 				5628B0E32A9FB3C600A8757C /* StubView.swift in Sources */,
 				72E9310A2AB0964F00EECD95 /* OnboardingDataModel.swift in Sources */,
+				560DCE852AC1F9AF002067FF /* Network.swift in Sources */,
 				5628B0B42A9F9F6900A8757C /* ContentView.swift in Sources */,
 				5679F8832AB27F8600D33B52 /* ProfileView.swift in Sources */,
 				560016702AAA9FB50054F4AE /* ClientViewModelProtocol.swift in Sources */,
@@ -697,6 +721,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		560DCE772AC1F3DB002067FF /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.53.0;
+			};
+		};
 		5628B0DB2A9FA6AD00A8757C /* XCRemoteSwiftPackageReference "AmiiboPorUnidad" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/barcodepandora/AmiiboPorUnidad.git";
@@ -708,6 +740,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		560DCE782AC1F3DB002067FF /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 560DCE772AC1F3DB002067FF /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
 		5628B0DC2A9FA6AD00A8757C /* AmiiboPorUnidad */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5628B0DB2A9FA6AD00A8757C /* XCRemoteSwiftPackageReference "AmiiboPorUnidad" */;

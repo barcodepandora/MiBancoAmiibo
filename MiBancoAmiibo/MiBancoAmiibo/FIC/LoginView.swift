@@ -83,6 +83,8 @@ struct LoginView: View {
         let validUsername = "Juan"
         let validPassword = "clave123"
         
+        LaunchViewModel()
+        
         return username == validUsername && password == validPassword
     }
 }
